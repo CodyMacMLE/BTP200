@@ -183,9 +183,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="io.cpp" />
-    <ClCompile Include="main.cpp" />
     <ClCompile Include="graph.cpp" />
     <ClCompile Include="w1p1.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="graph.h" />
+    <ClInclude Include="io.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
