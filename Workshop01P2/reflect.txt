@@ -1,0 +1,38 @@
+// Cody MacDonald
+// 159702232
+// cmacdonald33@myseneca.ca
+// January 19th, 2024
+
+Topics Learned:
+
+namespaces can be used across modules as long as they are a part of the same namespace. Initially, I believed that a namespace only persisted
+within a specific module. However, I did not need to preceed functions from graph.cpp with seneca:: (I still did though) in the mark.cpp module as they were within
+the same namespace.
+
+
+Issues:
+
+One of the larger issues I had was formatting the std::cout to have trailing spaces automatically. setw() allowed me to set the
+amount of space the placeholder should hold while setfill() allowed me to decide what character the placeholder would be. Finally,
+to align the items to the left I needed to add setiosflags(ios::left). In which, I needed to convert the int type into a string.
+
+Another issues that was not resolved was dynamic memory. I had tried to figure out a way to dynamically set the size of the array "StudentFile" 
+of the "Mark" type. The problem that I was running into was that I needed the array to exist already to call readAllMarks(), yet that function
+was the one that returned the size (files read count) I would need to set the dynamic array. I could have gotten around this by creating my own
+function that reads the files and returns the count without storing it into an array. However, I was unsure whether we were allowed to edit the
+file.cpp module.
+
+main in namespace?:
+
+The standard of c compiling must have a global function called "main" for the code to run. By putting the main function within a namespace, the
+function is not global as it is within a block/scope of seneca::. If we did this the compiler would not be able to find the starting function that
+calls the rest of the programs functions.
+
+Modules over one file?:
+
+The main benefits to modular coding in my view at this moment is splitting the code into multiple modules allows for easier editing. You can 
+update a module and it won't affect the code in a large part. Of course, if updating the functions breaks other functions then it is an issue.
+However, I was able to edit my printStudentFile() and sortByMark() function which broke multiple times, yet the code still ran other parts
+like the menu normally.
+The other benefit would be grouping functions by related modules allows you to find code easier. Rather than scrolling through a wall of text.
+This benefit would be even more noticable when there are millions of lines of code rather than the smaller code we have written here.

@@ -26,13 +26,30 @@
       <Platform>ARM64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="file.cpp" />
+    <ClCompile Include="graph.cpp" />
+    <ClCompile Include="io.cpp" />
+    <ClCompile Include="mark.cpp" />
+    <ClCompile Include="w1p2.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="group1.csv" />
+    <None Include="group2.csv" />
+    <None Include="group3.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="file.h" />
+    <ClInclude Include="graph.h" />
+    <ClInclude Include="io.h" />
+    <ClInclude Include="mark.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{3541cea8-228d-4eec-9bd8-abdab7c76554}</ProjectGuid>
-    <RootNamespace>Workshop01</RootNamespace>
+    <ProjectGuid>{ea5a8dec-fb87-4826-9f08-314907760121}</ProjectGuid>
+    <RootNamespace>Workshop01P2</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Workshop01P1</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -182,15 +199,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="io.cpp" />
-    <ClCompile Include="graph.cpp" />
-    <ClCompile Include="w1p1.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="graph.h" />
-    <ClInclude Include="io.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

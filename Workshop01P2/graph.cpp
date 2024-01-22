@@ -2,6 +2,10 @@
 #include "io.h"
 #include "graph.h"
 
+// Cody MacDonald
+// 159702232
+// cmacdonald33@myseneca.ca
+// January 19th, 2024
 
 using namespace std;
 
@@ -79,10 +83,9 @@ namespace seneca
 		drawLineWithLabel(GRAPH_WIDTH + 4, label); // PART_2: `+4` is new in part 2 (expands the graph to accommodate the number at the beginning of line)
 		for (int i = 0; i < noOfSamples; ++i)
 		{
-			printInt((10 - i) * 10, 4); // PART_2: New in part 2
-			printSampleBar(samples[i], max);
+				printInt((10 - i) * 10, 4); // PART_2: New in part 2
+				printSampleBar(samples[i], max);
 		}
 		drawLine(GRAPH_WIDTH + 4); // PART_2: `+4` is new in part 2 (expands the graph to accommodate the number at the beginning of line)
 	}
-
 }

@@ -1,6 +1,11 @@
 #ifndef NAMESPACE_IO_H // replace with relevant names, each header should have its own header guard, unique in the ENTIRE project
 #define NAMESPACE_IO_H
 
+// Cody MacDonald
+// 159702232
+// cmacdonald33@myseneca.ca
+// January 19th, 2024
+
 namespace seneca
 {
 	/// <summary>
@@ -12,8 +17,8 @@ namespace seneca
 	/// The maximum width of the graph when drawn to the screen.
 	/// </summary>
 	const int GRAPH_WIDTH = 65;
-
-	/// <summary>
+	
+  /// <summary>
 		/// Draw on the screen a line of dashes of specified length; the first and last symbols
 		///   in the line are `+`.
 		/// 

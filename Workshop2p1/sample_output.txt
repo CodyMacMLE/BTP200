@@ -1,0 +1,55 @@
+T1: Extract various tokens from the file
+==========:==========:==========:==========:==========
+[this is a text][1234][9.8][welcome to c++][987654321]
+
+
+T2: Check missing file detection
+==========:==========:==========:==========:==========
+[Success] Missing file correctly handled.
+
+
+T3: Check data loading with a good file
+==========:==========:==========:==========:==========
+[Success] The file 'movies.csv' was loaded.
+
+
+T4: Show some movies loaded from file
+==========:==========:==========:==========:==========
+Look Who's Talking, 7500000, $296000000, 5.9
+Driving Miss Daisy, 7500000, $145793296, 7.4
+The War of the Roses, 26000000, $160200000, 6.8
+Ace Ventura: Pet Detective, 15000000, $107217396, 6.9
+American Pie, 11000000, $235483004, 7
+Index out of bounds.
+
+
+T5: Show specific ranges as loaded from file
+==========:==========:==========:==========:==========
+******** First movies in collection ****************
+>> Look Who's Talking, 7500000, $296000000, 5.9
+>> Driving Miss Daisy, 7500000, $145793296, 7.4
+>> Turner & Hooch, 13000000, $71079915, 7.2
+>> Born on the Fourth of July, 14000000, $161001698, 7.2
+>> Field of Dreams, 15000000, $84431625, 7.5
+>> Uncle Buck, 15000000, $79258538, 7
+******** Movies in the middle of collection ****************
+>> Jurassic Park III, 93000000, $368800000, 8.9
+>> Pulp Fiction, 8000000, $213928762, 8.9
+>> Ace Ventura: Pet Detective, 15000000, $107217396, 6.9
+>> Dumb and Dumber, 16000000, $247275374, 7.3
+>> The Santa Clause, 22000000, $189833357, 6.4
+>> The Mask, 23000000, $351583407, 6.9
+******** Last three movies from collection ****************
+>> Lethal Weapon 4, 140000000, $285444603, 6.6
+>> The Blair Witch Project, 60000, $248000000, 6.5
+>> American Pie, 11000000, $235483004, 7
+
+
+T6: Load a second collection of movies
+==========:==========:==========:==========:==========
+******** My Favorites ****************
+>> Sleeping with the Enemy, 19000000, $174999005, 6.2
+>> Father of the Bride, 20000000, $89325780, 6.5
+>> The Naked Gun 2 1/2: The Smell of Fear, 23000000, $86900000, 6.5
+>> Teenage Mutant Ninja Turtles II, 25000000, $78600000, 8
+>> Beauty and the Beast, 25000000, $377350553, 8

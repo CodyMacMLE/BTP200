@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/codymacdonald/Documents/GitHub/BTP200/Workshop01",
+      "program": "/Users/codymacdonald/Documents/GitHub/BTP200/Workshop01/build/Debug/outDebug"
+    }
+  ]
+}
