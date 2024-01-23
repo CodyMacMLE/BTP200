@@ -25,17 +25,15 @@ int main()
 		std::cout << "[" << str << "]";
 		delete[] str;
 		str = nullptr;
-	} // remove after debug
-		/* // debug point
 		
 		// get the second token as an int (delimiter is '|')
 		int iData = 0;
-		seneca::read(iData, '|');
+		seneca::read(&iData, '|');
 		std::cout << "[" << iData << "]";
 
 		// get the third token as a double (delimiter is ',')
 		double dData = 0;
-		seneca::read(dData);
+		seneca::read(&dData);
 		std::cout << "[" << dData << "]";
 
 		// get the fourth token as a string (delimiter is '!')
@@ -45,7 +43,7 @@ int main()
 
 		// get the last token as a long (delimiter is ',')
 		long lData = 0;
-		seneca::read(lData);
+		seneca::read(&lData);
 		std::cout << "[" << lData << "]\n";
 		seneca::closeFile();
 	}
@@ -119,6 +117,6 @@ int main()
 
 	// cleanup: if memory is leaked, "valgrind" will flag it.
 	seneca::deallocateMemory();
-	*/
+
 	return cout;
 }

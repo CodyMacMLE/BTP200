@@ -66,56 +66,76 @@ namespace seneca {
 
 	// TODO: define below all the functions from this module
 
-	/* TODO: add the prototype of the `read` function that receives as a parameter
-	*         a single character and returns the address of a dynamically allocated
-	*         C-string. Implement it in the cpp file as described below.
-	* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-	*
-	* read()
-	* - create a local variable that will store the number of characters
-	*     that must be extracted from the file. This is your counter.
-	*     Initialize it with 0.
-	* - using `std::ftell()`, find the position in the file. Store the returned
-	*      value in a local variable.
-	* - in a loop, extract one character at a time from the file using
-	*     `std::fscanf()`. If the extracted character is not the delimiter,
-	*     increment the counter. If nothing was extracted from file or the
-	*     delimiter was found, stop the loop.
-	* - using `std::fseek()` reposition the cursor in file at the beginning
-	*     of the token. Pass as second parameter the position returned by
-	*     `std::ftell()` above, and pass `SEEK_SET` as the third parameter.
-	* - create a pointer to `char` that will store the address of the array
-	*     extracted from file. This is the extracted token from the file.
-	*     Initialize the pointer with null.
-	* - allocate dynamic memory for the array of characters. The amount of
-	*     memory is the counter + 1 (to make room for the null byte).
-	* - in a loop, extract one character at a time from the file using
-	*     `std::fscanf()`. If the extracted character is not the delimiter,
-	*     store it in the array at the next available position. If nothing
-	*     was extracted from file or the delimiter was found, stop the loop.
-	* - return the address of the array of characters.
-	*
-	* Documentation to read:
-	* - `std::ftell`   - https://en.cppreference.com/w/cpp/io/c/ftell
-	* - `std::fscanf`  - https://en.cppreference.com/w/cpp/io/c/fscanf
-	* - `std::fseek`   - https://en.cppreference.com/w/cpp/io/c/fseek
-	* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-	*/
 	char* read(char delim)
 	{
 		int count = 0;
 		long position = ftell(g_fptr);
-		while (fscanf(g_fptr, "r") != delim)
+		bool done = false;
+		while(!done)
 		{
-			count++;
+			char c;
+			fscanf(g_fptr, "%c", &c);
+			if (c != delim) {
+				count++;
+			}
+			else
+			{
+				done = true;
+			}
 		}
 		fseek(g_fptr, position, SEEK_SET);
 		char* str = nullptr;
 		str = new char[count + 1];
-		for (int i = 0; i < count; i++)
+		for (int i = 0; i < count + 1; i++)
 		{
-			str[i] = fscanf(g_fptr, "r");
+			fscanf(g_fptr, "%c", &str[i]);
 		}
+		str[count] = '\0';
 		return str;
+	}
+
+	bool read(int* val, char delim)
+	{
+		bool isVal = false;
+		char* str = read(delim);
+		if (str != nullptr)
+		{
+			*val = atoi(str);
+			isVal = true;
+		}
+		delete[] str;
+		str = nullptr;
+		
+		return isVal;
+	}
+
+	bool read(long* val, char delim)
+	{
+		bool isValNull = true;
+		char* str = read(delim);
+		if (str != nullptr)
+		{
+			*val = atol(str);
+			isValNull = false;
+		}
+		delete[] str;
+		str = nullptr;
+
+		return isValNull;
+	}
+
+	bool read(double* val, char delim)
+	{
+		bool isValNull = true;
+		char* str = read(delim);
+		if (str != nullptr)
+		{
+			*val = atof(str);
+			isValNull = false;
+		}
+		delete[] str;
+		str = nullptr;
+
+		return isValNull;
 	}
 }

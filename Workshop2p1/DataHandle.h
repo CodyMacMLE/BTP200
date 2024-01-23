@@ -54,29 +54,7 @@ namespace seneca {
 	/// <param name="delim">the character following the number. The default
 	///   value for the delimiter is a comma (`,`).</param>
 	/// <returns>true if a number is read, false otherwise.</returns>
-	/* TODO: add the prototype of the `read` function that receives as parameters
-	*         a reference to an object of type `int` and a character, and returns a
-	*         boolean value.  Implement it in the cpp file as described below.
-	* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-	*
-	* read()
-	* - use `seneca::read()` to extract an array of characters from the file
-	*     up until the delimiter is found (or the end of file is reached).
-	*     Store the address of this array in a pointer (this array is dynamically
-	*     allocated, and must be deallocated later).
-	* - if the address received above is not null, use `std::atoi()` to convert
-	*     the array of characters to an integer. Pass the array's address to
-	*     `std::atoi()` and store the returned value in the parameter.
-	*   - deallocate the memory used by the array of characters (the number is stored
-	*       now in the parameter).
-	*   - return `true`.
-	* - if the address received above is null, return `false`.
-	* 
-	*
-	* Documentation to read:
-	* - `std::atoi`    - https://en.cppreference.com/w/cpp/string/byte/atoi
-	* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-	*/
+	bool read(int* val, char delim = ',');
 
 	/// <summary>
 	/// Reads from the file a single integer and stores it in the parameter.
@@ -88,19 +66,7 @@ namespace seneca {
 	/// <param name="delim">the character following the number. The default
 	///   value for the delimiter is a comma (`,`).</param>
 	/// <returns>true if a number is read, false otherwise.</returns>
-	/* TODO: add the prototype of the `read` function that receives as parameters
-	*         a reference to an object of type `long` and a character, and returns a
-	*         boolean value.  Implement it in the cpp file as described below.
-	* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-	*
-	* read()
-	* - similar as the previous function. Use `std::atol()` to convert
-	*     the array of characters into a number.
-	*
-	* Documentation to read:
-	* - `std::atol`    - https://en.cppreference.com/w/cpp/string/byte/atoi
-	* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-	*/
+	bool read(long* val, char delim = ',');
 
 	/// <summary>
 	/// Reads from the file a single floating point number and stores it
@@ -113,19 +79,7 @@ namespace seneca {
 	/// <param name="delim">the character following the number. The default
 	///   value for the delimiter is a comma (`,`).</param>
 	/// <returns>true if a number is read, false otherwise.</returns>
-	/* TODO: add the prototype of the `read` function that receives as parameters
-	*         a reference to an object of type `double` and a character, and returns a
-	*         Boolean value.  Implement it in the cpp file as described below.
-	* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-	*
-	* read()
-	* - similar as the previous function. Use `std::atof()` to convert
-	*     the array of characters into a number.
-	*
-	* Documentation to read:
-	* - `std::atof`    - https://en.cppreference.com/w/cpp/string/byte/atof
-	* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-	*/
+	bool read(double* val, char delim = ',');
 }
 #endif
 
