@@ -1,10 +1,10 @@
 #include <iostream>
 #include <cstring>
-// TODO: include any other header that is necessary for your solution
+#include "Movie.h"
 
 using namespace std;
 
-// TODO: put everything in the `seneca` namespace
+namespace seneca {
 
 	/// <summary>
 	/// The address of a dynamically-allocated array of
@@ -18,4 +18,5 @@ using namespace std;
 	/// </summary>
 	int g_cntMovies = 0;
 
-// TODO: define below all the functions from this module
+	// TODO: define below all the functions from this module
+}

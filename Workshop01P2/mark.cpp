@@ -38,26 +38,6 @@ namespace seneca {
 	/// <param name="filename">stores the address of an array of characters
 	///   representing the filename that holds the data with marks</param>
 	/// <returns>true if the data files is opened successfully, false otherwise.</returns>
-	/* TODO: define the `printReport` function
-	* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-	*
-	* printReport()
-	*
-	* - use the function `seneca::openFile()` to open the file
-	* - if the file is successfully open:
-	*   - use the function `seneca::readMarks()` to load the content of the file
-	*   - create an array with how many marks are in each interval
-	*   - use the function `seneca::printGraph()` to print the *Bar Chart* with the
-	*       number of marks in each interval
-	*   - sort ascending the collection of marks based on the `m_mark` field
-	*   - print all the marks in the sorted collection using the format
-	*       `## : [MARK] FIRST_NAME LAST_NAME`
-	*       (see sample output)
-	*   - use the function `seneca::closeFile()` to close the file
-	* - return true if the file was successfully open, false otherwise
-	*
-	* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-	*/
 	bool printReport(const char* filename)
 	{
 		bool flag = seneca::openFile(filename);

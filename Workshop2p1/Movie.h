@@ -1,9 +1,9 @@
-// TODO: Add header guard to protect against multiple inclussions
-//       The header guard must follow standard conventions.
+#ifndef W2_MOVIE_H
+#define W2_MOVIE_H
 
 #include <climits> // for INT_MAX
 
-// TODO: put all the code `seneca` namespace
+namespace seneca {
 
 	/// <summary>
 	/// A structure that encapsulates some information about a
@@ -161,3 +161,5 @@
 	*
 	* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 	*/
+}
+#endif

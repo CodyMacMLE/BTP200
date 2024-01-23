@@ -49,7 +49,7 @@
       <Filter>Resource Files</Filter>
     </Text>
     <Text Include="tokens.txt">
-      <Filter>Resource Files</Filter>
+      <Filter>Source Files</Filter>
     </Text>
   </ItemGroup>
 </Project>

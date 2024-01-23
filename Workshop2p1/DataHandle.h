@@ -1,7 +1,7 @@
-// TODO: Add header guard to protect against multiple inclussions
-//       The header guard must follow standard conventions.
+#ifndef W2_DATA_HANDLE_H
+#define W2_DATA_HANDLE_H
 
-// TODO: put all the code `seneca` namespace
+namespace seneca {
 	/// <summary>
 	/// Opens the file specified as parameter for reading.
 	///   If the file is already opened, this function does nothing
@@ -42,41 +42,7 @@
 	/// <returns>the address of a dynamically allocated array of characters,
 	///   containing the data extracted from the file.  The caller of this function
 	///   is responsible to deallocate this array.</returns>
-	/* TODO: add the prototype of the `read` function that receives as a parameter
-	*         a single character and returns the address of a dynamically allocated
-	*         C-string. Implement it in the cpp file as described below.
-	* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-	*
-	* read()
-	* - create a local variable that will store the number of characters
-	*     that must be extracted from the file. This is your counter.
-	*     Initialize it with 0.
-	* - using `std::ftell()`, find the position in the file. Store the returned
-	*      value in a local variable.
-	* - in a loop, extract one character at a time from the file using
-	*     `std::fscanf()`. If the extracted character is not the delimiter,
-	*     increment the counter. If nothing was extracted from file or the
-	*     delimiter was found, stop the loop.
-	* - using `std::fseek()` reposition the cursor in file at the beginning
-	*     of the token. Pass as second parameter the position returned by
-	*     `std::ftell()` above, and pass `SEEK_SET` as the third parameter. 
-	* - create a pointer to `char` that will store the address of the array
-	*     extracted from file. This is the extracted token from the file.
-	*     Initialize the pointer with null.
-	* - allocate dynamic memory for the array of characters. The amount of
-	*     memory is the counter + 1 (to make room for the null byte).
-	* - in a loop, extract one character at a time from the file using
-	*     `std::fscanf()`. If the extracted character is not the delimiter,
-	*     store it in the array at the next available position. If nothing
-	*     was extracted from file or the delimiter was found, stop the loop.
-	* - return the address of the array of characters.
-	* 
-	* Documentation to read:
-	* - `std::ftell`   - https://en.cppreference.com/w/cpp/io/c/ftell
-	* - `std::fscanf`  - https://en.cppreference.com/w/cpp/io/c/fscanf
-	* - `std::fseek`   - https://en.cppreference.com/w/cpp/io/c/fseek
-	* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-	*/
+	char* read(char delim = ',');
 
 	/// <summary>
 	/// Reads from the file a single integer and stores it in the parameter.
@@ -160,3 +126,6 @@
 	* - `std::atof`    - https://en.cppreference.com/w/cpp/string/byte/atof
 	* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 	*/
+}
+#endif
+
