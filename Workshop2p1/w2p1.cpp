@@ -2,7 +2,7 @@
 #include "Movie.h"
 #include "DataHandle.h"
 
-using namespace seneca;
+
 int cout = 0; // won't compile if headers don't follow convention regarding namespaces
 
 const int ERROR_MISSING_FILE = 1;
@@ -82,7 +82,7 @@ int main()
 			std::cout << "[Success] The file 'movies.csv' was loaded.\n";
 		}
 	}
-
+	/*
 	{
 		// TEST: print some of the loaded movies
 		std::cout << "\n\nT4: Show some movies loaded from file\n";
@@ -117,6 +117,7 @@ int main()
 
 	// cleanup: if memory is leaked, "valgrind" will flag it.
 	seneca::deallocateMemory();
-
+	*/
 	return cout;
 }
+s

@@ -2,6 +2,7 @@
 #define W2_MOVIE_H
 
 #include <climits> // for INT_MAX
+#include <string>
 
 namespace seneca {
 
@@ -40,26 +41,7 @@ namespace seneca {
 	/// </summary>
 	/// <param name="fileName">the file containing the collection of movies</param>
 	/// <returns>true if the data was loaded successfully, false otherwise.</returns>
-	/* TODO: add the prototype of the `loadData` function that receives as a parameter
-	*         the address of an unmodifiable C-string and returns a Boolean value.
-	*         Implement it in the cpp file as described below.
-	* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-	* 
-	* loadData()
-	* - check if there are movies already loaded. If "yes", call the function
-	*     `seneca::deallocateMemory()` to discard the old collection.
-	* - open the file whose name was received as parameter (use `seneca::openFile`).
-	*     If the file cannot be open, exit the function with `false`.
-	* - using `seneca::getRecordsCount()`, retrieve the number of movies that exists
-	*     in the file. Store this number in a global variable.
-	* - allocate a dynamic array of `Movie` objects able to store all the records from
-	*     the file.  Store the address of this array in a global variable.
-	* - in a loop, load from file one movie at a time and store the info in the array.
-	*     Use `seneca::loadData` overload to retrieve a single record from file.
-	* - close the file and exit with `true`.
-	* 
-	* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-	*/
+	bool loadData(const char* fileName);
 
 	/// <summary>
 	/// Load from the file information about a single movie, and
@@ -70,21 +52,7 @@ namespace seneca {
 	/// <param name="aMovie">the object to populate with data extracted
 	///   from the file.</param>
 	/// <returns>true if data was successfully extracted, false otherwise.</returns>
-	/* TODO: add the prototype of the `loadData` function that receives as a parameter
-	*         a reference to an object of type `Movie` and returns a Boolean value.
-	*         Implement it in the cpp file as described below.
-	* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-	*
-	* loadData()
-	* - using `seneca::read()` function implemented in the other module, extract
-	*     from the file the *budget*, the *gross income*, the *rating*, and the *title*
-	*     of a movie (IN THIS ORDER).  Store the extracted data in the attributes of
-	*     the parameter.  Make sure to use the appropriate delimiters for each token.
-	* - if all the `seneca::read()` functions called above were successful, return
-	*     `true`, `false` otherwise.
-	*
-	* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-	*/
+	bool loadData(Movie &aMovie);
 
 	/// <summary>
 	/// Prints to screen the information about a single movie, in the format:
