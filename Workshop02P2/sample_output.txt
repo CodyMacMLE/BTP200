@@ -1,0 +1,65 @@
+T1: Empty Hotel
+==========:==========:==========:==========:==========
+Standard Rooms:
+1. A11 (0/2)
+2. A12 (0/1)
+Family Rooms:
+1. B1001 (0/4)
+2. B1002 (0/4)
+3. B1003 (0/3)
+Suites:
+1. C201 (0/8)
+2. C202 (0/6)
+
+
+T2: Looking for a Room
+==========:==========:==========:==========:==========
+[SUCCESS] Room B102 doesn't exists in the hotel!
+[SUCCESS] Room B1002 was found in the hotel!
+B1002 (0/4)
+
+T3: Guests have arrived
+==========:==========:==========:==========:==========
+Standard Rooms:
+1. A11 (2/2): Arianna Montgomery, Edwin Montgomery
+2. A12 (0/1)
+Family Rooms:
+1. B1001 (0/4)
+2. B1002 (0/4)
+3. B1003 (0/3)
+Suites:
+1. C201 (0/8)
+2. C202 (0/6)
+
+
+T4: Too Many Guests in a Room
+==========:==========:==========:==========:==========
+Standard Rooms:
+1. A11 (2/2): Arianna Montgomery, Edwin Montgomery
+2. A12 (0/1)
+Family Rooms:
+1. B1001 (4/4): Preston Murray, Jessica Alexander, Daniel Jones, April Perry
+2. B1002 (0/4)
+3. B1003 (0/3)
+Suites:
+1. C201 (0/8)
+2. C202 (0/6)
+
+
+T5: All Travellers Have Arrived
+==========:==========:==========:==========:==========
+Standard Rooms:
+1. A11 (2/2): Arianna Montgomery, Edwin Montgomery
+2. A12 (1/1): Derek Stevens
+Family Rooms:
+1. B1001 (4/4): Preston Murray, Jessica Alexander, Daniel Jones, April Perry
+2. B1002 (4/4): Brooke Rogers, Vivian Lloyd, James Payne, Chelsea Murphy
+3. B1003 (0/3)
+Suites:
+1. C201 (2/8): Ellia Craig, Chelsea Armstrong
+2. C202 (2/6): Owen Clark, Myra Perry
+
+
+T6: Show Room C201
+==========:==========:==========:==========:==========
+C201 (2/8): Ellia Craig, Chelsea Armstrong
