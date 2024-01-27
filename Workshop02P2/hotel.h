@@ -84,7 +84,6 @@ struct Guest
 	/// <param name="lName">the last name of the guest</param>
 	void setGuest(Guest& theGuest, const char* fName, const char* lName);
 
-
 	/// <summary>
 	/// Load all information about the rooms found in a file and store it in
 	///   the `Hotel` object.
@@ -92,18 +91,42 @@ struct Guest
 	/// <param name="fileName">the name of the file containing data.</param>
 	/// <param name="theHotel">the object that must be populated with data
 	///   extracted from the file.</param>
-	bool loadData(const char* filename, Hotel theHotel);
+	bool loadData(const char* filename, Hotel& theHotel);
 
 	/// <summary>
 	/// Load from a file the information about a single room.
 	/// </summary>
 	/// <param name="theRoom">the object where to put data loaded from the file</param>
-	bool loadData(Room theRoom);
+	bool loadData(Room& theRoom);
 
 	/// <summary>
 	/// Print to screen the details of the hotel.
 	/// </summary>
 	/// <param name="theHotel">the hotel whose details are to be printed.</param>
 	void display(const Hotel& theHotel);
+
+	/// <summary>
+	/// Searches in the hotel for a room with the number specified in the
+	///   second parameter.
+	/// </summary>
+	/// <param name="theHotel">the hotel where to search for a room.</param>
+	/// <param name="roomNumber">the room number being searched.</param>
+	/// <returns>the address of the `Room` object with the number specified
+	///   in the second parameter, or null if no such room exists.</returns>
+	Room* findRoom(Hotel theHotel, const char* roomNumber);
+
+	/// <summary>
+	/// Print to screen the details of a single room.
+	/// </summary>
+	/// <param name="theRoom">the room whose details are to be printed.</param>
+	void display(Room theRoom);
+
+	/// <summary>
+	/// Add a guest to the room ONLY if the room capacity has not been reached.
+	///   If the room is already at capacity, this function does nothing.
+	/// </summary>
+	/// <param name="theRoom">the room where guests will be staying</param>
+	/// <param name="theGuest">the gust that wants to stay in the room</param>
+	void addGuest(Room& theRoom, Guest theGuest);
 }
 #endif

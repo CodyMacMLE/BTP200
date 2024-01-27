@@ -39,7 +39,7 @@ int main()
 
 		seneca::display(aHotel);
 	}
-/*
+
 	{
 		// TEST: Search for some rooms
 		std::cout << "\n\nT2: Looking for a Room\n";
@@ -69,7 +69,7 @@ int main()
 			return ERROR_TEST_FAILED;
 		}
 	}
-
+	
 	{
 		// TEST: Some Guests Arrive at the Hotel
 		std::cout << "\n\nT3: Guests have arrived\n";
@@ -91,7 +91,7 @@ int main()
 			seneca::addGuest(*aRoom, travellers[i]);
 		seneca::display(aHotel);
 	}
-
+	/*
 	{
 		// TEST: All travelers are at the hotel
 		std::cout << "\n\nT5: All Travellers Have Arrived\n";
