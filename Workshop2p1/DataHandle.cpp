@@ -6,8 +6,12 @@
 #include "DataHandle.h"
 #include "Movie.h"
 
-using namespace std;
+/// Cody MacDonald
+/// cmacdonald33@senecacollege.ca
+/// 159702232
+/// January 24th, 2024
 
+using namespace std;
 namespace seneca {
 
 	/// <summary>
@@ -94,28 +98,32 @@ namespace seneca {
 		return str;
 	}
 
-	bool read(int* val, char delim)
+	bool read(int& val, char delim)
 	{
 		bool isVal = false;
+		int& dDataRef = val;
+
 		char* str = read(delim);
 		if (str != nullptr)
 		{
-			*val = atoi(str);
+			dDataRef = atoi(str);
 			isVal = true;
 		}
+
 		delete[] str;
 		str = nullptr;
+
 		
 		return isVal;
 	}
 
-	bool read(long* val, char delim)
+	bool read(long& val, char delim)
 	{
 		bool isValNull = true;
 		char* str = read(delim);
 		if (str != nullptr)
 		{
-			*val = atol(str);
+			val = atol(str);
 			isValNull = false;
 		}
 		delete[] str;
@@ -124,13 +132,13 @@ namespace seneca {
 		return isValNull;
 	}
 
-	bool read(double* val, char delim)
+	bool read(double& val, char delim)
 	{
 		bool isValNull = true;
 		char* str = read(delim);
 		if (str != nullptr)
 		{
-			*val = atof(str);
+			val = atof(str);
 			isValNull = false;
 		}
 		delete[] str;

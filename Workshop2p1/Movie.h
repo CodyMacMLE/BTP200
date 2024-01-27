@@ -4,6 +4,11 @@
 #include <climits> // for INT_MAX
 #include <string>
 
+/// Cody MacDonald
+/// cmacdonald33@senecacollege.ca
+/// 159702232
+/// January 24th, 2024
+
 namespace seneca {
 
 	/// <summary>
@@ -60,20 +65,7 @@ namespace seneca {
 	/// </summary>
 	/// <param name="idx">the index in the collection of the movie whose info
 	///   must be printed to screen.</param>
-	/* TODO: add the prototype of the `display` function that receives as a parameter
-	*         an object of type `int`, and doesn't return anything.
-	*         Implement it in the cpp file as described below.
-	* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-	*
-	* display()
-	* - if the index is more or equal to 0 and less than the total number of movies
-	*     existing in the collection, then print to screen the information about the movie
-	*     at the index received as parameter.
-	* - if the index is outside the boundaries of the array, print to screen the message
-	*     `Index out of bounds.\n`
-	*
-	* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-	*/
+	void display(int idx);
 
 	/// <summary>
 	/// Prints to screen all the movies from the collection starting with the index
@@ -95,39 +87,11 @@ namespace seneca {
 	///   shown. The default value of this parameter is `0`.</param>
 	/// <param name="endIdx">the index of the last movie from the collection to be
 	///   shown. The default value of this parameter is `INT_MAX`.</param>
-	/* TODO: add the prototype of the `display` function that receives as parameters
-	*         the address of an unmodifiable C-string, and two objects of type `int`.
-	*         Implement it in the cpp file as described below.
-	* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-	*
-	* display()
-	* - print the label to screen in the format
-	*     `******** LABEL ****************\n`
-	* - in a loop, starting at `startIdx` and until `endIdx` (but not exceeding the
-	*     boundaries of the collection)
-	*   - print `>> `
-	*   - call `seneca::display()` to print a single movie from a specific index.
-	*
-	* Documentation to read:
-	* - `INT_MAX`    - https://en.cppreference.com/w/c/types/limits
-	* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-	*/
+	void display(const char* label, int startIdx = 0, int endIdx = INT_MAX);
 
 	/// <summary>
 	/// Deallocate all the dynamic memory used by the collection of movies.
 	/// </summary>
-	/* TODO: add the prototype of the `deallocateMemory` function.
-	*         Implement it in the cpp file as described below.
-	* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-	*
-	* deallocateMemory()
-	* - iterate over the collection of movies and deallocate the memory used by the
-	*     title of each movie.
-	* - deallocate the memory used by the array of movies.
-	* - set the global pointer `g_colMovies` to null,
-	*     and the global counter `g_cntMovies` to 0.
-	*
-	* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-	*/
+	void deallocateMemory();
 }
 #endif

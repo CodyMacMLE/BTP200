@@ -2,6 +2,10 @@
 #include "Movie.h"
 #include "DataHandle.h"
 
+/// Cody MacDonald
+/// cmacdonald33@senecacollege.ca
+/// 159702232
+/// January 24th, 2024
 
 int cout = 0; // won't compile if headers don't follow convention regarding namespaces
 
@@ -28,12 +32,12 @@ int main()
 		
 		// get the second token as an int (delimiter is '|')
 		int iData = 0;
-		seneca::read(&iData, '|');
+		seneca::read(iData, '|');
 		std::cout << "[" << iData << "]";
 
 		// get the third token as a double (delimiter is ',')
 		double dData = 0;
-		seneca::read(&dData);
+		seneca::read(dData);
 		std::cout << "[" << dData << "]";
 
 		// get the fourth token as a string (delimiter is '!')
@@ -43,7 +47,7 @@ int main()
 
 		// get the last token as a long (delimiter is ',')
 		long lData = 0;
-		seneca::read(&lData);
+		seneca::read(lData);
 		std::cout << "[" << lData << "]\n";
 		seneca::closeFile();
 	}
@@ -82,20 +86,20 @@ int main()
 			std::cout << "[Success] The file 'movies.csv' was loaded.\n";
 		}
 	}
-	/*
+	
 	{
 		// TEST: print some of the loaded movies
 		std::cout << "\n\nT4: Show some movies loaded from file\n";
 		std::cout << "==========:==========:==========:==========:==========\n";
 
-		seneca::display(   0); // good -> "Look Who's Talking"
-		seneca::display(   1); // good -> "Driving Miss Daisy"
-		seneca::display(  10); // good -> "The War of the Roses"
-		seneca::display( 100); // good -> "Ace Ventura: Pet Detective"
-		seneca::display( 199); // good -> "American Pie"
-		seneca::display( 200); // Out of Bounds
+		seneca::display(0); // good -> "Look Who's Talking"
+		seneca::display(1); // good -> "Driving Miss Daisy"
+		seneca::display(10); // good -> "The War of the Roses"
+		seneca::display(100); // good -> "Ace Ventura: Pet Detective"
+		seneca::display(199); // good -> "American Pie"
+		seneca::display(200); // Out of Bounds
 	}
-
+	
 	{
 		// TEST: check the display with ranges
 		std::cout << "\n\nT5: Show specific ranges as loaded from file\n";
@@ -105,7 +109,7 @@ int main()
 		seneca::display("Movies in the middle of collection", 98, 103);
 		seneca::display("Last three movies from collection", 197); // using default value for the third param
 	}
-
+	
 	{
 		// TEST: load data from a second file
 		std::cout << "\n\nT6: Load a second collection of movies\n";
@@ -117,7 +121,6 @@ int main()
 
 	// cleanup: if memory is leaked, "valgrind" will flag it.
 	seneca::deallocateMemory();
-	*/
+	
 	return cout;
 }
-s

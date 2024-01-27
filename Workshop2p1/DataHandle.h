@@ -1,6 +1,11 @@
 #ifndef W2_DATA_HANDLE_H
 #define W2_DATA_HANDLE_H
 
+/// Cody MacDonald
+/// cmacdonald33@senecacollege.ca
+/// 159702232
+/// January 24th, 2024
+
 namespace seneca {
 	/// <summary>
 	/// Opens the file specified as parameter for reading.
@@ -54,7 +59,7 @@ namespace seneca {
 	/// <param name="delim">the character following the number. The default
 	///   value for the delimiter is a comma (`,`).</param>
 	/// <returns>true if a number is read, false otherwise.</returns>
-	bool read(int* val, char delim = ',');
+	bool read(int& val, char delim = ',');
 
 	/// <summary>
 	/// Reads from the file a single integer and stores it in the parameter.
@@ -66,7 +71,7 @@ namespace seneca {
 	/// <param name="delim">the character following the number. The default
 	///   value for the delimiter is a comma (`,`).</param>
 	/// <returns>true if a number is read, false otherwise.</returns>
-	bool read(long* val, char delim = ',');
+	bool read(long& val, char delim = ',');
 
 	/// <summary>
 	/// Reads from the file a single floating point number and stores it
@@ -79,7 +84,7 @@ namespace seneca {
 	/// <param name="delim">the character following the number. The default
 	///   value for the delimiter is a comma (`,`).</param>
 	/// <returns>true if a number is read, false otherwise.</returns>
-	bool read(double* val, char delim = ',');
+	bool read(double& val, char delim = ',');
 }
 #endif
 
