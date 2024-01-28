@@ -18,7 +18,7 @@ namespace seneca {
 		bool exitFlag = false;
 		if (theHotel.m_cntRooms)
 		{
-			//deallocateMemory();
+			deallocate(theHotel);
 		}
 		else
 		{
@@ -58,8 +58,7 @@ namespace seneca {
 		{
 			if (theHotel.m_rooms[i].m_roomNumber[0] == 'A')
 			{
-				cout << RoomTypeCounter << ". " << theHotel.m_rooms[i].m_roomNumber;
-				cout << " (" << theHotel.m_rooms[i].m_cntGuests << "/" << theHotel.m_rooms[i].m_maxCntGuests << ")" << endl;
+				display(theHotel.m_rooms[i]);
 				RoomTypeCounter++;
 			}
 		}
@@ -69,8 +68,7 @@ namespace seneca {
 		{
 			if (theHotel.m_rooms[i].m_roomNumber[0] == 'B')
 			{
-				cout << RoomTypeCounter << ". " << theHotel.m_rooms[i].m_roomNumber;
-				cout << " (" << theHotel.m_rooms[i].m_cntGuests << "/" << theHotel.m_rooms[i].m_maxCntGuests << ")" << endl;
+				display(theHotel.m_rooms[i]);
 				RoomTypeCounter++;
 			}
 		}
@@ -80,8 +78,7 @@ namespace seneca {
 		{
 			if (theHotel.m_rooms[i].m_roomNumber[0] == 'C')
 			{
-				cout << RoomTypeCounter << ". " << theHotel.m_rooms[i].m_roomNumber << 
-					" (" << theHotel.m_rooms[i].m_cntGuests << "/" << theHotel.m_rooms[i].m_maxCntGuests << ")" << endl;
+				display(theHotel.m_rooms[i]);
 				RoomTypeCounter++;
 			}
 		}
@@ -104,24 +101,15 @@ namespace seneca {
 		}
 	}
 
-	/* TODO: add the prototype of the `addGuest` function that receives as a parameters
-	*         a reference to an object of type `Room` and an unmodifiable reference
-	*         to an object of type `Guest`.
-	* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-	*
-	* addGuest()
-	* - resize the array of guests currently staying in the room, but only if there
-	*     enough capacity to accommodate the new guest.
-	*
-	* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 	void addGuest(Room& theRoom, Guest theGuest)
 	{
 		if (theRoom.m_cntGuests < theRoom.m_maxCntGuests)
 		{
-			if (theRoom.m_cntGuests = 0)
+			if (theRoom.m_cntGuests == 0)
 			{
 				theRoom.m_guests = new Guest[theRoom.m_cntGuests + 1];
-				theRoom.m_guests[theRoom.m_cntGuests + 1] = theGuest;
+				theRoom.m_guests[theRoom.m_cntGuests] = theGuest;
+				theRoom.m_cntGuests++;
 			}
 			else
 			{
@@ -134,10 +122,11 @@ namespace seneca {
 				theRoom.m_guests = new Guest[theRoom.m_cntGuests + 1];
 				for (int i = 0; i < theRoom.m_cntGuests; i++)
 				{
-					 theRoom.m_guests[i] = Temp[i];
+					theRoom.m_guests[i] = Temp[i];
 				}
-				theRoom.m_guests[theRoom.m_cntGuests + 1] = theGuest;
-				delete [] Temp;
+				delete[] Temp;
+				theRoom.m_guests[theRoom.m_cntGuests] = theGuest;
+				theRoom.m_cntGuests++;
 			}
 		}
 	}
@@ -155,10 +144,6 @@ namespace seneca {
 		return addr;
 	}
 
-	/// <summary>
-	/// Deallocates all dynamic memory used by a `Hotel` object.
-	/// </summary>
-	/// <param name="theHotel">the object whose memory must be deallocated.</param>
 	/* TODO: add the prototype of the `deallocate` function that receives as a parameter
 	*         an unmodifiable reference to an object of type `Room`.
 	* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -169,4 +154,14 @@ namespace seneca {
 	*   - the array of rooms
 	*
 	* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	void deallocate(Hotel& theHotel)
+	{
+		for (int i = 0; i < theHotel.m_cntRooms; i++)
+		{
+			delete [] theHotel.m_rooms[i].m_roomNumber;
+			delete [] theHotel.m_rooms[i].m_guests;
+		}
+		delete[] theHotel.m_rooms;
+		theHotel.m_cntRooms = 0;
+	}
 }

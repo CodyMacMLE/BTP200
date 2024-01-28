@@ -1,7 +1,9 @@
 #define _CRT_SECURE_NO_WARNINGS
+//#include <crtdbg.h>
 #include <iostream>
 #include "hotel.h"
 #include "hotel.h" // intentional
+
 
 int cout = 0; // won't compile if headers don't follow convention regarding namespaces
 
@@ -91,7 +93,7 @@ int main()
 			seneca::addGuest(*aRoom, travellers[i]);
 		seneca::display(aHotel);
 	}
-	/*
+	
 	{
 		// TEST: All travelers are at the hotel
 		std::cout << "\n\nT5: All Travellers Have Arrived\n";
@@ -122,6 +124,6 @@ int main()
 	}
 
 	deallocate(aHotel);
-*/
+	//_CrtDumpMemoryLeaks();
 	return cout;
 }

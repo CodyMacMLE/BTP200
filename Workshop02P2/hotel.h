@@ -128,5 +128,11 @@ struct Guest
 	/// <param name="theRoom">the room where guests will be staying</param>
 	/// <param name="theGuest">the gust that wants to stay in the room</param>
 	void addGuest(Room& theRoom, Guest theGuest);
+
+	/// <summary>
+	/// Deallocates all dynamic memory used by a `Hotel` object.
+	/// </summary>
+	/// <param name="theHotel">the object whose memory must be deallocated.</param>
+	void deallocate(Hotel& theHotel);
 }
 #endif
