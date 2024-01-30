@@ -80,7 +80,7 @@ namespace seneca
 		///     the car has</param>
 		/// <param name="serviceCost">an estimation of the repair cost of the problem reported
 		///     by a customer.</param>
-		void set(const char* plateNo, const char* model, const char* desc, int serviceCost);
+		void set(const char* plateNo, const char* model, const char* desc, double serviceCost);
 
 		/// <summary>
 		/// Prints to screen the content of the object.
