@@ -1,5 +1,5 @@
-#ifndef W2_HOTEL_H
-#define W2_HOTEL_H
+#ifndef SENECA_HOTEL_H
+#define SENECA_HOTEL_H
 
 namespace seneca {
 /// <summary>

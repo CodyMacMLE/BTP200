@@ -1,5 +1,5 @@
-#ifndef W2_FILE_H
-#define W2_FILE_H
+#ifndef SENECA_FILE_H
+#define SENECA_FILE_H
 
 namespace seneca {
 	
