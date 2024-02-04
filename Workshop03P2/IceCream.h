@@ -4,7 +4,7 @@
 // Cody MacDonald
 // cmacdonald33@myseneca.ca
 // 159702232
-//
+// February 2nd, 2024
 
 namespace seneca
 {
@@ -29,14 +29,32 @@ namespace seneca
 		bool i_hasVanillaWafer;
 
 		/// <summary>
-		/// Current status of the object
+		/// The price of the single unit of icecream
 		/// </summary>
-		const char* i_objectStatus;
+		double i_unitPrice;
 
 	public:
-		void updateObjContents(const char* flavour, int cntScoops, bool isWaffer);
-		void updateObjStatus(const char* const status);
+		/// <summary>
+		/// Update the private members of the boject icecream
+		/// </summary>
+		/// <param name="flavour">flavour of Icecream</param>
+		/// <param name="cntScoops">Number of scoops</param>
+		/// <param name="isWaffer">True if icecream is in a waffer, false otherwise</param>
+		void updateObjContents(const char* flavour, int cntScoops, bool isWaffer, double unitPrice);
+		
+		/// <summary>
+		/// Checks if the flavour exists
+		/// </summary>
+		/// <param name="flavour">flavour of icecream to compare</param>
+		bool exists(const char* flavour) const;
 
+		/// <summary>
+		/// return the parameters flavour, count of scoops, and in Waffer (true) or not (false)
+		/// </summary>
+		/// <param name="flavour">The flavour</param>
+		/// <param name="cntScoops">The number of scoops in the order</param>
+		/// <param name="hasVanillaWaffer">Whether the order is in a waffer (t) or not (f)</param>
+		void getIceCream(char* flavour, int& cntScoops, bool& hasVanillaWaffer, double& unitPrice) const;	
 	};
 }
 #endif // !SENECA_ICECREAM_H

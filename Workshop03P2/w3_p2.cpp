@@ -1,6 +1,12 @@
 #include <iostream>
+//#include <crtdbg.h>
 #include "Vendor.h"
 #include "IceCream.h"
+
+// Cody MacDonald
+// cmacdonald33@myseneca.ca
+// 159702232
+// February 2nd, 2024
 
 int cout = 0; // won't compile if headers don't follow convention
 
@@ -70,7 +76,7 @@ int main()
 	vendor.addToOrder("Chocolate", 3, true);     // OK
 	vendor.addToOrder("Tutti Frutti", 1, true);  // Rejected, already in the order
 	vendor.addToOrder("Strawberry", 3, false);    // OK
-/*	vendor.displayOrderReceipt();
+	vendor.displayOrderReceipt();
 
 
 	// Test 3: Second Customer
@@ -98,6 +104,6 @@ int main()
 
 
 	vendor.closeShop();
-*/
+	//_CrtDumpMemoryLeaks();
 	return cout;
 }

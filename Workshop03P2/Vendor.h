@@ -2,6 +2,11 @@
 #define SENECA_VENDOR_H
 #include "IceCream.h"
 
+// Cody MacDonald
+// cmacdonald33@myseneca.ca
+// 159702232
+// February 2nd, 2024
+
 const char* const INVALID_REASON__FLAVOUR = "Received bad value for flavour.";
 const char* const INVALID_REASON__SCOOPS = "Received bad value for cntScoops";
 const char* const INVALID_REASON__EXISTS = "Order already exits in Order";
@@ -26,6 +31,8 @@ namespace seneca {
 		/// </summary>
 		int orderCnt;
 
+		double orderSubTotal;
+
 		/// <summary>
 		/// deallocates the memory, used in closeShop && startNewOrder
 		/// </summary>
@@ -36,6 +43,11 @@ namespace seneca {
 		/// </summary>
 		/// <param name=arr>The array to be resized</param>
 		bool resizeArray();
+
+		const double chocolateScoopPrice = 1.24;
+		const double fruttiScoopPrice = 1.50;
+		const double otherFlavourScoopPrice = 0.99;
+		const double vanillaWafferPrice = 0.50;
 	public:
 		/// <summary>
 		/// Deallocates any dynamic memory used by the object and sets it to an empty state.
