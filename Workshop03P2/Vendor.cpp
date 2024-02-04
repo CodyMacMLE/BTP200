@@ -1,5 +1,6 @@
 #include <iostream>
 #include <iomanip>
+#include <cstring>
 #include "Vendor.h"
 #include "IceCream.h"
 

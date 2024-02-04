@@ -1,0 +1,72 @@
+T1: Create an empty fridge
+==========:==========:==========:==========:==========
+The fridge object is in an empty state.
+Contains any food? [no]
+----------:----------:----------:----------:----------
+
+T2: Add some foods to the kitchen fridge
+==========:==========:==========:==========:==========
+     Fridge model: Frigero
+  Fridge capacity: 20kg
+  Fill percentage: 70% full
+The list of foods:
+  - Apples (4kg)
+  - Milk (2kg)
+  - Carrots (3kg)
+  - Bell Pepper (5kg)
+----------:----------:----------:----------:----------
+
+T3: Add over capacity
+==========:==========:==========:==========:==========
+     Fridge model: Frigero
+  Fridge capacity: 20kg
+  Fill percentage: 70% full
+The list of foods:
+  - Apples (4kg)
+  - Milk (2kg)
+  - Carrots (3kg)
+  - Bell Pepper (5kg)
+----------:----------:----------:----------:----------
+
+T4: Fill to >=90%
+==========:==========:==========:==========:==========
+Is full? [no]
+     Fridge model: Frigero
+  Fridge capacity: 20kg
+  Fill percentage: 95% full
+The list of foods:
+  - Apples (4kg)
+  - Milk (2kg)
+  - Carrots (3kg)
+  - Bell Pepper (5kg)
+  - Mozzarella Cheese (2kg)
+  - Beets (1kg)
+  - Sheppard Pepper (2kg)
+Is full? [yes]
+----------:----------:----------:----------:----------
+
+T5: Looking for food in a full fridge
+==========:==========:==========:==========:==========
+Contains any food? [yes]
+Contains milk? [yes]
+Contains eggs? [no]
+Contains beets? [yes]
+----------:----------:----------:----------:----------
+
+T6: The basement fridge
+==========:==========:==========:==========:==========
+     Fridge model: So Cold
+  Fridge capacity: 50kg
+  Fill percentage: 86% full
+The list of foods:
+  - Apples (4kg)
+  - Milk (2kg)
+  - Carrots (3kg)
+  - Onions (3kg)
+  - Bell Pepper (5kg)
+  - Sheppard Pepper (2kg)
+  - Potatoes (10kg)
+  - Orange Juice (3kg)
+  - Pizza Leftovers (3kg)
+  - Veggie Soup (8kg)
+----------:----------:----------:----------:----------
