@@ -128,10 +128,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="food.cpp" />
+    <ClCompile Include="fridge.cpp" />
     <ClCompile Include="w4_p1.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="food.h" />
+    <ClInclude Include="fridge.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="sample_output.txt" />

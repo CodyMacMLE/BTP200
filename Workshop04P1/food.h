@@ -1,6 +1,11 @@
 #ifndef SENECA_FOOD_H
 #define SENECA_FOOD_H
 
+// Cody MacDonald
+// cmacdonald33@myseneca.ca
+// 159702232
+// February 4th, 2024
+
 namespace seneca
 {
 	/// <summary>
@@ -32,6 +37,14 @@ namespace seneca
 		/// This constructor assumes that the parameters are valid.
 		/// </summary>
 		Food(const char* name, int weight);
+
+		/// <summary>
+		/// Checks if one rFood object is the same to the lFood Object
+		/// </summary>
+		/// <param name="lFood">The Food object (L) for comparison</param>
+		/// <param name="rFood">The Food object (R) for comparison</param>
+		/// <returns></returns>
+		friend bool operator==(Food& lFood, Food& rFood);
 	};
 }
 

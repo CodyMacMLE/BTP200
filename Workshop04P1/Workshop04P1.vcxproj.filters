@@ -18,12 +18,18 @@
     <ClCompile Include="food.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="fridge.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="w4_p1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="food.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fridge.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
