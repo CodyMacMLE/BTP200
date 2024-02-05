@@ -6,10 +6,27 @@ using namespace std;
 namespace lectures
 {
 
-	ResizeableArray::ResizeableArray()
+	ResizeableArray::ResizeableArray() : m_arr{ nullptr }, m_cnt{ 0 } // n members Accomplishes the same, try to keep in order due to cpu time
+	{ // Keep brackets
+		cout << "[" << this << "] Default constructor was called\n";
+	//	m_arr = nullptr;
+	//	m_cnt = 0;
+	}
+
+	ResizeableArray::ResizeableArray(int cnt)
 	{
-		m_arr = nullptr;
-		m_cnt = 0;
+		cout << "[" << this << "] Custom constructor was called\n";
+		if (cnt > 0)
+		{
+			m_arr = new double[cnt];
+			for (int i = 0; i < cnt; i++)
+				m_arr[i] = 0;
+			m_cnt = cnt;
+		}
+		else // need the else if its less than 0, in a constructor no matter what all variables must be initialized to some value
+		{
+			*this = ResizeableArray();
+		}
 	}
 
 	void ResizeableArray::display() const
@@ -42,5 +59,36 @@ namespace lectures
 	{
 		cout << "Delete address at:    [" << m_arr << "]" << endl;
 		delete[] m_arr;
+	}
+
+	ResizeableArray& ResizeableArray::operator+=(double value)
+	{
+		addItem(value);
+		return *this;
+	}
+
+	ResizeableArray& ResizeableArray::operator+=(const ResizeableArray& other)
+	{
+		for (int i = 0; i < other.m_cnt; i++)
+			this->addItem(other.m_arr[i]);
+		return *this;
+	}
+
+	ResizeableArray& ResizeableArray::operator++()
+	{
+		for (int i = 0; i < m_cnt; ++i)
+			m_arr[i] += 1;
+		return *this;
+	}
+
+	ResizeableArray::operator bool() const
+	{
+		return m_cnt > 0;
+	}
+
+	std::ostream& operator <<(std::ostream& out, const ResizeableArray& arr)
+	{
+		arr.display();
+		return cout;
 	}
 }

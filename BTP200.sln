@@ -17,7 +17,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Session 3", "Session 3\Sess
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Workshop02P2", "Workshop02P2\Workshop02P2.vcxproj", "{E07D9F4F-BC9F-430C-B97C-85BDEC79A577}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Session 4", "Session4\Session4.vcxproj", "{9500E1C5-0A1B-4D1F-849B-4F8F61E20A00}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Session 4 5", "Session4\Session4.vcxproj", "{9500E1C5-0A1B-4D1F-849B-4F8F61E20A00}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Workshop03P1", "Workshop03P1\Workshop03P1.vcxproj", "{4ACF3ED1-0E53-47B7-86D9-6FA776F1B9C6}"
 EndProject
