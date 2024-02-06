@@ -17,34 +17,31 @@ namespace seneca {
 		m_cntFoods = 0;
 	}
 
-	Fridge::Fridge(const char* model, int capacity) // Not Initializing, check strcpy in setFridge (no dynamic allocation in this one)
+	Fridge::Fridge(const char* model, int capacity)
 	{
 		*this = Fridge();
-		if (model[0] != '\0' && model != nullptr && capacity > 9)
-		{
-			m_capacity = capacity;
-			strcpy(m_model, model);
-			m_foods = nullptr;
-			m_cntFoods = 0;
-		}
+		setModel(model, capacity);
 	}
 	
-	Fridge::Fridge(Food* foods, int cntFoods, const char* model, int capacity) // Not Initializing
+	Fridge::Fridge(Food* foods, int cntFoods, const char* model, int capacity)
 	{
 		*this = Fridge();
-		if (model[0] != '\0' && model != nullptr && capacity > 9 && foods != nullptr && cntFoods !=0)
+		setModel(model, capacity);
+		if (m_model != nullptr)
 		{
-			m_capacity = capacity;
-			strcpy(m_model, model);
-			m_foods = foods;
-			m_cntFoods = cntFoods;
+			for (int i = 0; i < cntFoods; i++)
+			{
+				addFood(foods[i]);
+			}				
 		}
 	}
 
 	Fridge::~Fridge()
 	{
-		delete[] this->m_foods;
-		delete[] this->m_model;
+		delete[] m_foods;
+		delete[] m_model;
+		m_capacity = 0;
+		m_cntFoods = 0;
 	}
 
 	int Fridge::getContentWeight() const
@@ -60,18 +57,17 @@ namespace seneca {
 	bool Fridge::addFood(Food aFood)
 	{
 		bool exitFlag = false;
-		if ((getContentWeight() + aFood.m_weight) < m_capacity)
+		if ((getContentWeight() + aFood.m_weight) <= m_capacity)
 		{
 			Food* tmp = new Food[m_cntFoods + 1];
-
 			for (int i = 0; i < m_cntFoods; i++)
+			{
 				tmp[i] = m_foods[i];
-
+			}
 			tmp[m_cntFoods] = aFood;
 
 			delete[] m_foods;
 			m_foods = tmp;
-
 			m_cntFoods++;
 			exitFlag = true;
 		}
@@ -99,10 +95,10 @@ namespace seneca {
 		return exitFlag;
 	}
 
-	bool Fridge::hasFood(const char* theFood) const       // All = true
+	bool Fridge::hasFood(const char* theFood) const
 	{
 		bool exitFlag = false;
-		if (m_cntFoods > 0)
+		if (m_cntFoods > 0 && theFood == "\0")
 		{
 			exitFlag = true;
 		}
@@ -110,8 +106,10 @@ namespace seneca {
 		{
 			for (int i = 0; i < m_cntFoods; i++)
 			{
-				if (strcmp(m_foods[i].m_name, theFood))
+				if (strcmp(theFood, m_foods[i].m_name) == 0)
+				{
 					exitFlag = true;
+				}
 			}
 		}
 		return exitFlag;
