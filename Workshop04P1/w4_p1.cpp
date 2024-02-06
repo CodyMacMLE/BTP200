@@ -1,6 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
-#include <crtdbg.h>
 #include "fridge.h"
 #include "fridge.h" // intentional
 #include "food.h"
@@ -39,7 +38,7 @@ int main()
 
 	std::cout << "T2: Add some foods to the kitchen fridge\n";
 	std::cout << "==========:==========:==========:==========:==========\n";
-	kitchenFridge.setModel("Frigero", 20);
+	kitchenFridge.setModel("Frigero", 20); // setModel is memory leak 1 ?
 	kitchenFridge.addFood(foods[0]);
 	kitchenFridge.addFood(foods[1]);
 	kitchenFridge.addFood(foods[2]);
@@ -85,6 +84,5 @@ int main()
 	basementFridge.display();
 	std::cout << "----------:----------:----------:----------:----------\n";
 
-	_CrtDumpMemoryLeaks();
 	return cout;
 }

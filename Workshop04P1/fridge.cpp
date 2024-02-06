@@ -61,13 +61,14 @@ namespace seneca {
 		{
 			Food* tmp = new Food[m_cntFoods + 1];
 			for (int i = 0; i < m_cntFoods; i++)
-			{
 				tmp[i] = m_foods[i];
-			}
 			tmp[m_cntFoods] = aFood;
 
 			delete[] m_foods;
-			m_foods = tmp;
+			m_foods = new Food[m_cntFoods + 1];
+			for (int i = 0; i < m_cntFoods + 1; i++)
+				m_foods[i] = tmp[i];
+			delete[] tmp;
 			m_cntFoods++;
 			exitFlag = true;
 		}
