@@ -1,0 +1,84 @@
+T1: Create an empty guitar object
+==========:==========:==========:==========:==========
+Empty guitar object!
+Has strings? [no]
+~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~
+
+T2: Create a guitar with a model, but no strings
+==========:==========:==========:==========:==========
+Guitar Model: Stratocaster
+Guitar cannot be used yet because it has no strings.
+Has strings? [no]
+~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~
+
+T3: Create a guitar with another model, but no strings
+==========:==========:==========:==========:==========
+Guitar Model: Les Paul
+Guitar cannot be used yet because it has no strings.
+Has strings? [no]
+~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~
+
+T4: Create a complete guitar object
+==========:==========:==========:==========:==========
+Has strings? [yes]
+Guitar Model: Yamaha C40II Classical Guitar
+Strings:
+ #1. High-Carbon Steel (0.93mm)
+ #2. Pure Nickel (0.81mm)
+ #3. Nickel Plated (0.79mm)
+ #4. Cobalt (0.95mm)
+ #5. Maraging Steel (0.76mm)
+ #6. Bronze (0.74mm)
+~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~
+
+T5: Create a complete guitar object with more strings
+==========:==========:==========:==========:==========
+Has strings? [yes]
+Guitar Model: Cordoba F7 Acoustic Nylon String Flamenco Guitar
+Strings:
+ #1. Nylon (0.5mm)
+ #2. Nylon (0.5mm)
+ #3. Nylon (0.5mm)
+ #4. Nylon (0.5mm)
+ #5. Nylon (0.5mm)
+ #6. Nylon (0.5mm)
+ #7. High-Carbon Steel (0.93mm)
+ #8. Pure Nickel (0.81mm)
+ #9. Nickel Plated (0.79mm)
+ #10. Cobalt (0.95mm)
+ #11. Maraging Steel (0.76mm)
+ #12. Bronze (0.74mm)
+~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~
+
+T6: Change all strings
+==========:==========:==========:==========:==========
+Guitar Model: Cordoba F7 Acoustic Nylon String Flamenco Guitar
+Strings:
+ #1. Nylon (0.5mm)
+ #2. Nylon (0.5mm)
+ #3. Nylon (0.5mm)
+ #4. Nylon (0.5mm)
+ #5. Nylon (0.5mm)
+ #6. Nylon (0.5mm)
+Has strings? [yes]
+~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~
+
+T7: Change some strings
+==========:==========:==========:==========:==========
+Has strings? [yes]
+Guitar Model: Cordoba F7 Acoustic Nylon String Flamenco Guitar
+Strings:
+ #1. Nylon (0.62mm)
+ #2. Nylon (0.77mm)
+ #3. Silver (1.1mm)
+ #4. Bronze (0.74mm)
+ #5. Maraging Steel (0.76mm)
+ #6. Steel (0.92mm)
+~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~
+
+T8: Remove the strings
+==========:==========:==========:==========:==========
+Guitar Model: Cordoba F7 Acoustic Nylon String Flamenco Guitar
+Guitar cannot be used yet because it has no strings.
+Has strings? [no]
+~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~

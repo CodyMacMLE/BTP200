@@ -1,5 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
+#include <crtdbg.h>
 #include "fridge.h"
 #include "fridge.h" // intentional
 #include "food.h"
@@ -84,5 +85,6 @@ int main()
 	basementFridge.display();
 	std::cout << "----------:----------:----------:----------:----------\n";
 
+	_CrtDumpMemoryLeaks();
 	return cout;
 }
