@@ -1,0 +1,77 @@
+T1: Testing Account Setup
+==========:==========:==========:==========:==========
+Joe Williams -> $0 in checking account.
+Cindy Kofler -> $0 in saving account.
+Rohan Kumaar -> $0 in checking account.
+Raya Chandok -> $0 in saving account.
+Silvia Smith -> $0 in saving account.
+~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~
+
+T2: Credit and Debit the Accounts
+==========:==========:==========:==========:==========
+Joe Williams -> $110.95 in checking account.
+Cindy Kofler -> $119.64 in saving account.
+Rohan Kumaar -> $365.33 in checking account.
+Raya Chandok -> $-10 in saving account.
+Silvia Smith -> $1000 in saving account.
+~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~
+
+T3: Casting-to-bool operator
+==========:==========:==========:==========:==========
+#1. Is account open? yes
+#2. Is account open? yes
+#3. Is account open? no
+#4. Is account open? yes
+#5. Is account open? no
+#6. Is account open? yes
+#7. Is account open? yes
+#8. Is account open? no
+~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~
+
+T4: The other casting operators
+==========:==========:==========:==========:==========
+#1 [Joe Williams][110.95][2]
+#2 [Cindy Kofler][119.64][2]
+#3 [Not Open][nan][-1]
+#4 [Rohan Kumaar][365.33][2]
+#5 [Not Open][nan][-1]
+#6 [Raya Chandok][-10][2]
+#7 [Silvia Smith][1000][1]
+#8 [Not Open][nan][-1]
+~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~
+
+T5: Add Interest to all accounts
+==========:==========:==========:==========:==========
+Joe Williams -> $110.95 in checking account.
+Joe Williams -> $111.505 in checking account.
+Joe Williams -> $112.062 in checking account.
+Cindy Kofler -> $119.64 in saving account.
+Cindy Kofler -> $122.631 in saving account.
+Cindy Kofler -> $125.697 in saving account.
+Rohan Kumaar -> $365.33 in checking account.
+Rohan Kumaar -> $367.157 in checking account.
+Rohan Kumaar -> $368.992 in checking account.
+Raya Chandok -> $-10 in saving account.
+Raya Chandok -> $-10 in saving account.
+Raya Chandok -> $-10 in saving account.
+Silvia Smith -> $1000 in saving account.
+Silvia Smith -> $1025 in saving account.
+Silvia Smith -> $1050.62 in saving account.
+~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~
+
+T6: Test comparison operators
+==========:==========:==========:==========:==========
+Cindy Kofler -> $125.697 in saving account.
+Cindy has more than $125 in her acc? yes
+Is $125 bigger than Cindy's balance? no
+Cindy has more than $126 in her acc? no
+Is $126 bigger than Cindy's balance? yes
+~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~
+
+T7: Deposit funds
+==========:==========:==========:==========:==========
+Rohan Kumaar -> $368.992 in checking account.
+Rohan Kumaar -> $714.112 in checking account.
+[Rohan Kumaar][368.992][2]
+[Rohan Kumaar][714.112][3]
+~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~
