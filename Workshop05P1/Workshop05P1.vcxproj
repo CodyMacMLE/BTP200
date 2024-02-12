@@ -128,7 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="bankAccount.cpp" />
-    <ClCompile Include="sample_output.cpp" />
+    <ClCompile Include="w5_p1.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="sample_output.txt" />

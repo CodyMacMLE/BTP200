@@ -30,12 +30,22 @@ namespace seneca {
 		/// </summary>
 		/// <param name="name">Name of the account user</param>
 		/// <param name="checking">True is the account is checking, false if it is savings</param>
-		BankAccount(const char* name = "", bool checking);
+		BankAccount(const char* name = "", bool checking = false);
 
 		/// <summary>
 		/// Displays the account info to screen
 		/// </summary>
-		void display();
+		void display() const;
+
+		/// <summary>
+		/// Converts to bool whether account is open (true) or closed (false)
+		/// </summary>
+		explicit operator bool() const;
+
+		/// <summary>
+		/// the conversion-to-double operator is a query that returns the balance from the current account if the account is open, or std::nan("") if the account is not open.
+		/// </summary>
+		operator double() const;
 	};
 
 }

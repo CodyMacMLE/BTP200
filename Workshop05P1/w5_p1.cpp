@@ -29,7 +29,7 @@ int main()
 		}
 		std::cout << "~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~\n\n";
 	}
-
+/*
 	{
 		// TEST
 		std::cout << "T2: Credit and Debit the Accounts\n";
@@ -130,6 +130,6 @@ int main()
 			<< std::endl;
 		std::cout << "~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~\n";
 	}
-
+*/
 	return cout;
 }
