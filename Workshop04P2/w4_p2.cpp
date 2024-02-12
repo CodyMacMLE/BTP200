@@ -5,6 +5,11 @@
 #include "guitarString.h"
 #include "guitarString.h"  // intentional
 
+// Cody MacDonald
+// cmacdonald33@myseneca.ca
+// 159702232
+// February 11th, 2024
+
 int cout = 0; // prevents compilation if headers don't follow convention
 
 int main()

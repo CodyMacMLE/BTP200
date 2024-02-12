@@ -24,10 +24,15 @@ namespace seneca {
 	public:
 
 		/// <summary>
+		/// The default constructor [m_model = nullptr, m_strings = nullptr, m_cntStrings = 0]
+		/// </summary>
+		Guitar();
+
+		/// <summary>
 		/// A constructor that initializes the object with a model name and default otherwise
 		/// </summary>
 		/// <param name="model">: a const string of the model name</param>
-		Guitar(const char* model = "Stratocaster");
+		Guitar(const char* model);
 
 		/// <summary>
 		///  A constructor that initializes the object with all custom parameters, default otherwise

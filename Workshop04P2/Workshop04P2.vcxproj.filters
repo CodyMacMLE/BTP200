@@ -18,10 +18,10 @@
     <ClCompile Include="guitarString.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="guitar.cpp">
+    <ClCompile Include="w4_p2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="w4_p2.cpp">
+    <ClCompile Include="Guitar.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

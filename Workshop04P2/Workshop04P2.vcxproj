@@ -182,7 +182,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="guitar.cpp" />
+    <ClCompile Include="Guitar.cpp" />
     <ClCompile Include="guitarString.cpp" />
     <ClCompile Include="w4_p2.cpp" />
   </ItemGroup>

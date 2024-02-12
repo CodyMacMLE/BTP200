@@ -1,19 +1,20 @@
-#define _CRT_SECURE_NO_WARNINGS
 #include <cstring>
 #include "guitar.h"
 
 using namespace std;
 
 namespace seneca {
+	Guitar::Guitar() : m_model{ '\0' }, m_strings{nullptr}, m_cntStrings{0}
+	{
+	}
 
 	Guitar::Guitar(const char* model)
 	{
-		if (model == nullptr)
-			m_model[0] = '\0';
-		else
-		strcpy(m_model, model);
-		m_strings = nullptr;
-		m_cntStrings = 0;
+		*this = Guitar();
+		if (model != nullptr || model[0] != '\0')
+		{
+			strcpy(this->m_model, model);
+		}
 	}
 
 	Guitar::Guitar(const GuitarString* strings, int cntStrings, const char* model)
@@ -27,12 +28,6 @@ namespace seneca {
 				appendString(strings[i]);
 			}
 		}
-	}
-
-	Guitar::~Guitar()
-	{
-		if (m_strings != nullptr)
-			delete[] this->m_strings;
 	}
 
 	Guitar& Guitar::appendString(const GuitarString& aString)
@@ -52,51 +47,12 @@ namespace seneca {
 
 	bool Guitar::isStrung() const
 	{
-		bool exitFlag = false;
-		if (this->m_cntStrings > 0)
-			exitFlag = true;
-		return exitFlag;
+		// Next function to work on, is next in main.cpp and is used in display();
 	}
 
-	Guitar& Guitar::reString(const GuitarString* strings, int cntStrings)
+	std::ostream& Guitar::display(std::ostream& out = std::cout) const
 	{
-		delete[] this->m_strings;
-		m_cntStrings = 0;
-		for (auto i = 0; i < cntStrings; i++)
-		{
-			if (strings[i].getGauge() != 0.0)
-			{
-				m_cntStrings++;
-			}
-		}
-
-		this->m_strings = new GuitarString[m_cntStrings];
-		for (auto i = 0; i < m_cntStrings; i++)
-			m_strings[i] = strings[i];
-		return *this;
-	}
-
-	Guitar& Guitar::reString(const GuitarString& aString, int idx)
-	{
-		if (idx >= 0 && idx < m_cntStrings)
-		{
-			m_strings[idx] = aString;
-		}
-		return *this;
-	}
-
-	Guitar& Guitar::deString()
-	{
-		if (m_strings != nullptr)
-			delete[] m_strings;
-		m_cntStrings = 0;
-
-		return *this;
-	}
-
-	ostream& Guitar::display(std::ostream& out) const
-	{
-		if ((m_model == nullptr || m_model[0] == '\0') || m_strings == nullptr)
+		if (m_model != nullptr)
 		{
 			out << "Empty guitar object!" << endl;
 		}
@@ -116,10 +72,11 @@ namespace seneca {
 					char tmpMaterial[30 + 1];
 					strcpy(tmpMaterial, m_strings[i].getMaterial());
 					double tmpGauge = m_strings[i].getGauge();
-					out << " #" << i + 1 << ". " << tmpMaterial << " (" << tmpGauge << "mm)" << endl;
+					out << "#" << i + 1 << ". " << tmpMaterial << " (" << tmpGauge << ")" << endl;
 				}
 			}
 		}
 		return out;
 	}
+
 }
