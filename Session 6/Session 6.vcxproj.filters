@@ -15,26 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="guitarString.cpp">
+    <ClCompile Include="ResizeableArray.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="guitar.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="w4_p2.cpp">
+    <ClCompile Include="Source.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="sample_output.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="guitarString.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="guitar.h">
+    <ClInclude Include="ResizeableArray.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

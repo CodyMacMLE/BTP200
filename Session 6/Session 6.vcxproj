@@ -29,8 +29,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{650b371e-2b00-4c8f-86f7-6f1289e6ce43}</ProjectGuid>
-    <RootNamespace>Workshop04P2</RootNamespace>
+    <ProjectGuid>{109dc90f-d478-4bd5-aff1-10396471aaeb}</ProjectGuid>
+    <RootNamespace>Session6</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -182,16 +182,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="guitar.cpp" />
-    <ClCompile Include="guitarString.cpp" />
-    <ClCompile Include="w4_p2.cpp" />
+    <ClCompile Include="ResizeableArray.cpp" />
+    <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="sample_output.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="guitar.h" />
-    <ClInclude Include="guitarString.h" />
+    <ClInclude Include="ResizeableArray.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
