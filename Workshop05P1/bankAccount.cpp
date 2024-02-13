@@ -4,6 +4,11 @@
 #include <cmath>
 #include "bankAccount.h"
 
+// Cody MacDonald
+// cmacdonald33@myseneca.ca
+// 159702232
+// February 13th, 2024
+
 using namespace std;
 namespace seneca {
 
@@ -51,15 +56,79 @@ namespace seneca {
 
 	BankAccount::operator const char* () const
 	{
-		char tmp[30];
+		return (*this) ? m_userName : "Not Open";
+	}
+
+	BankAccount::operator int() const
+	{
+		int exitFlag = -1;
+		if (m_transactions > 0)
+			exitFlag = m_transactions;
+		return exitFlag;
+	}
+
+	BankAccount& BankAccount::operator+= (double amount)
+	{
 		if (*this)
 		{
-			strcpy(tmp, m_userName);
+			m_balance += amount;
+			++m_transactions;
 		}
-		else
+		return *this;
+	}
+	BankAccount& BankAccount::operator-= (double amount)
+	{
+		operator+=(amount * -1);
+		return *this;
+	}
+
+	BankAccount BankAccount::operator+ (double amount) const
+	{
+		BankAccount result = *this;
+		result += amount;
+		return result;
+	}
+
+	BankAccount& BankAccount::operator++ ()
+	{
+		if (*this && m_balance > 0)
 		{
-			strcpy(tmp, "Not Open");
+			if (m_checking)
+			{
+				m_balance += (m_balance * 0.005);
+			}
+			else
+			{
+				m_balance += (m_balance * 0.025);
+			}
 		}
-		return tmp;
+		return *this;
+	}
+
+	BankAccount BankAccount::operator++ (int)
+	{
+		BankAccount result = *this;
+		++*this;
+		return result;
+	}
+
+	bool BankAccount::operator> (double amount) const
+	{
+		bool exitFlag = false;
+		if (*this)
+		{
+			exitFlag =  m_balance > amount;
+		}
+		return exitFlag;
+	}
+
+	bool operator> (double amount, BankAccount account)
+	{
+		bool exitFlag = false;
+		if (account)
+		{
+			exitFlag = amount > double(account);
+		}
+		return exitFlag;
 	}
 }

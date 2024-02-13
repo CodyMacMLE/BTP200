@@ -2,6 +2,11 @@
 #include "bankAccount.h"
 #include "bankAccount.h"    // intentional
 
+// Cody MacDonald
+// cmacdonald33@myseneca.ca
+// 159702232
+// February 13th, 2024
+
 int cout = 0; // prevents compilation if headers don't follow convention
 
 int main()
@@ -29,7 +34,7 @@ int main()
 		}
 		std::cout << "~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~\n\n";
 	}
-/*
+
 	{
 		// TEST
 		std::cout << "T2: Credit and Debit the Accounts\n";
@@ -130,6 +135,6 @@ int main()
 			<< std::endl;
 		std::cout << "~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~\n";
 	}
-*/
+
 	return cout;
 }
