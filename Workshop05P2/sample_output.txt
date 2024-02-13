@@ -1,0 +1,76 @@
+T1: Testing the display function and constructors.
+==========:==========:==========:==========:==========
+Superman (lvl: 1, str: 20)
+  - Flying (2)
+  - Laser Eye (8)
+  - Freezing Breath (8)
+  - Super strength (2)
+Flash (lvl: 1, str: 13)
+  - Super Speed (8)
+  - Super Healing (5)
+Martian-Man-Hunter (lvl: 1, str: 9)
+  - Telepathy (9)
+Aquaman (lvl: 1, str: 18)
+  - Water Bending (9)
+  - Animal telepathy (9)
+Green Lantern (lvl: 1, str: 10)
+  - Strong Will (10)
+~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~
+
+T2: Testing the +=/++ operators (level increase).
+==========:==========:==========:==========:==========
+Superman (lvl: 3, str: 60)
+  - Flying (2)
+  - Laser Eye (8)
+  - Freezing Breath (8)
+  - Super strength (2)
+Flash (lvl: 2, str: 26)
+  - Super Speed (8)
+  - Super Healing (5)
+Martian-Man-Hunter (lvl: 3, str: 27)
+  - Telepathy (9)
+Aquaman (lvl: 4, str: 72)
+  - Water Bending (9)
+  - Animal telepathy (9)
+Green Lantern (lvl: 5, str: 50)
+  - Strong Will (10)
+~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~
+
+T3: Testing the operator+= with negative parameters.
+==========:==========:==========:==========:==========
+Green Lantern (lvl: 3, str: 30)
+  - Strong Will (10)
+Aquaman (lvl: 1, str: 18)
+  - Water Bending (9)
+  - Animal telepathy (9)
+~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~
+
+T4: Testing the other += operator (add abilities).
+==========:==========:==========:==========:==========
+Martian-Man-Hunter (lvl: 3, str: 39)
+  - Telepathy (9)
+  - Flying (2)
+  - Super strength (2)
+Martian-Man-Hunter (lvl: 3, str: 69)
+  - Telepathy (9)
+  - Flying (2)
+  - Super strength (2)
+  - Phasing through objects (10)
+~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~
+
+T5: Testing insertion operators.
+==========:==========:==========:==========:==========
+Aquaman (lvl: 1, str: 20)
+  - Water Bending (9)
+  - Animal telepathy (9)
+  - Super strength (2)
+Green Lantern (lvl: 3, str: 45)
+  - Strong Will (10)
+  - Regeneration (5)
+~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~
+
+T6: Testing the comparison/conversion operators.
+==========:==========:==========:==========:==========
+Superman (60) stronger than Flash (26)? -> yes
+Flash (26) stronger than Superman (60)? -> no
+~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~
