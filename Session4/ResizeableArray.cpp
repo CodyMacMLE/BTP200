@@ -86,9 +86,18 @@ namespace lectures
 		return m_cnt > 0;
 	}
 
+	ResizeableArray::operator double() const
+	{
+		if (*this)
+			return m_cnt;
+	}
+
 	std::ostream& operator <<(std::ostream& out, const ResizeableArray& arr)
 	{
-		arr.display();
+		for (auto i = 0; i < arr.m_cnt; ++i)
+		{
+			out << "[" << arr.m_arr[i] << "]";
+		}
 		return cout;
 	}
 }

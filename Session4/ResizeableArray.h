@@ -80,14 +80,18 @@ namespace lectures
 		/// </summary>
 		explicit operator bool() const; //explicit in front means this operator can not be used in automatic conversion (only when a boolean is called)
 
+		operator double() const;
+
 		/// <summary>
 		/// Deconstructor:
 		/// Cleans up any dynamic memory in use by this object
 		/// </summary>
 		~ResizeableArray();
+
+		friend std::ostream& operator <<(std::ostream& out, const ResizeableArray& arr);
 	};
 	// a free helper function due to not needed the member this (this, is always put as the first param inside the class), and cout is the first param
-	std::ostream& operator <<(std::ostream& out, const ResizeableArray& arr);
+	//std::ostream& operator <<(std::ostream& out, const ResizeableArray& arr);
 }
 #endif
 

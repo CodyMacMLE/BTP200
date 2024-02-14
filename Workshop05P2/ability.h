@@ -1,6 +1,11 @@
 #ifndef SENECA_ABILITY_H
 #define SENECA_ABILITY_H
 
+// Cody MacDonald
+// cmacdonald33@myseneca.ca
+// 159702232
+// February 14th, 2024
+
 namespace seneca {
 	class Ability {
 		/// <summary>
@@ -24,17 +29,17 @@ namespace seneca {
 		/// <summary>
 		/// Checks if ability object exists: true if exists, false if empty.
 		/// </summary>
-		explicit operator bool() const;
+		operator bool() const;
 
 		/// <summary>
 		/// a query that returns the ability name
 		/// </summary>
-		explicit operator const char* () const;
+		operator const char* () const;
 
 		/// <summary>
 		/// A query to access the strength of the ability
 		/// </summary>
-		explicit operator int() const;
+		operator int() const;
 	};
 }
 #endif // !SENECA_ABILITY_H

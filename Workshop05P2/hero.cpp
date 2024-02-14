@@ -1,7 +1,12 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <cstring>
-#include "Hero.h"
+#include "hero.h"
+
+// Cody MacDonald
+// cmacdonald33@myseneca.ca
+// 159702232
+// February 14th, 2024
 
 using namespace std;
 namespace seneca {
@@ -67,7 +72,9 @@ namespace seneca {
 			++m_cntAbilities;
 			delete[] m_abilities;
 			m_abilities = new Ability[m_cntAbilities];
-			m_abilities = temp;
+			for (auto i = 0; i < m_cntAbilities; ++i)
+				m_abilities[i] = temp[i];
+			delete[] temp;
 		}
 		return *this;
 	}
@@ -99,23 +106,23 @@ namespace seneca {
 		}
 	}
 
-	bool operator< (const Hero h1, const Hero h2)
+	bool operator< (const Hero& h1, const Hero& h2)
 	{
-
+		return (int)h1 < (int)h2 ? true : false; // does it return false when equal?
 	}
 
-	bool operator> (const Hero h1, const Hero h2)
+	bool operator> (const Hero& h1, const Hero& h2)
 	{
-
+		return (int)h1 > (int)h2 ? true : false; // does it return false when equal?
 	}
 
-	Hero& operator>> (const Ability ability, Hero hero)
+	Hero& operator>> (const Ability& ability, Hero& hero)
 	{
-
+		return hero += ability;
 	}
 
-	Hero& operator<< (const Ability ability, Hero hero)
+	Hero& operator<< (Hero& hero, const Ability& ability)
 	{
-
+		return hero += ability;
 	}
 }

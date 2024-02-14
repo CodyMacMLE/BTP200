@@ -2,6 +2,11 @@
 #include <cstring>
 #include "ability.h"
 
+// Cody MacDonald
+// cmacdonald33@myseneca.ca
+// 159702232
+// February 14th, 2024
+
 namespace seneca {
 
 	Ability::Ability(const char* name, int strength)
@@ -25,13 +30,11 @@ namespace seneca {
 
 	Ability::operator const char* () const
 	{
-		if (*this)
-			return a_abilityName;
+		return (*this) ? a_abilityName : "Ability does not Exist";
 	}
 
 	Ability:: operator int() const
 	{
-		if (*this)
-			return a_strength;
+		return (*this) ? a_strength : 0;
 	}
 }

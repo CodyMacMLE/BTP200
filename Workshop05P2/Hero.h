@@ -1,7 +1,11 @@
 #ifndef SENECA_HERO_H
 #define SENECA_HERO_H
-
 #include "ability.h"
+
+// Cody MacDonald
+// cmacdonald33@myseneca.ca
+// 159702232
+// February 14th, 2024
 
 namespace seneca {
 	class Hero {
@@ -93,7 +97,7 @@ namespace seneca {
 	/// <param name="h1">an unmodifiable reference to an object of type Hero</param>
 	/// <param name="h2">an unmodifiable reference to an object of type Hero</param>
 	/// <returns>returns true if the strength of the hero received as the first parameter is smaller than the strength of the hero received as the second parameter; false otherwise.</returns>
-	bool operator< (const Hero h1, const Hero h2);
+	bool operator< (const Hero& h1, const Hero& h2);
 
 	/// <summary>
 	/// compares the power of two heroes
@@ -101,7 +105,7 @@ namespace seneca {
 	/// <param name="h1">an unmodifiable reference to an object of type Hero</param>
 	/// <param name="h2">an unmodifiable reference to an object of type Hero</param>
 	/// <returns> returns true if the strength of the hero received as the first parameter is greater than the strength of the hero received as the second parameter; false otherwise.</returns>
-	bool operator> (const Hero h1, const Hero h2);
+	bool operator> (const Hero& h1, const Hero& h2);
 
 	/// <summary>
 	/// adds to the hero received as the second parameter the ability received as the first parameter.
@@ -109,7 +113,7 @@ namespace seneca {
 	/// <param name="ability">an unmodifiable reference to an object of type Ability</param>
 	/// <param name="hero">a reference to an object of type Hero</param>
 	/// <returns>a reference to type Hero</returns>
-	Hero& operator>> (const Ability ability, Hero hero);
+	Hero& operator>> (const Ability& ability, Hero& hero);
 
 	/// <summary>
 	/// adds to the hero received as the first parameter the ability received as the second parameter.
@@ -117,7 +121,7 @@ namespace seneca {
 	/// <param name="ability">an unmodifiable reference to an object of type Ability</param>
 	/// <param name="hero">a reference to an object of type Hero</param>
 	/// <returns>a reference to type Hero</returns>
-	Hero& operator<< (const Ability ability, Hero hero);
+	Hero& operator<< (Hero& hero, const Ability& ability);
 }
 
 #endif // !SENECA_HERO_H
