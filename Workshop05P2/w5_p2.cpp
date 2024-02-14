@@ -32,7 +32,7 @@ int main()
 		seneca::Hero( "Aquaman",            &abilities[7], 2 ),
 		seneca::Hero( "Green Lantern",      &abilities[9], 1 ),
 	};
-/*
+
 	// Test 1
 	std::cout << "T1: Testing the display function and constructors.\n";
 	std::cout << "==========:==========:==========:==========:==========\n";
@@ -45,7 +45,7 @@ int main()
 	std::cout << "~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~\n\n";
 
 
-	// Test 2
+// Test 2
 	std::cout << "T2: Testing the +=/++ operators (level increase).\n";
 	std::cout << "==========:==========:==========:==========:==========\n";
 	++(++heroes[0]);
@@ -102,6 +102,6 @@ int main()
 			<< (const char*)one << " (" << (int)one << ")? -> "
 			<< (another > one ? "yes" : "no") << "\n";
 	std::cout << "~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~\n";
-*/
+
 	return cout;
 }

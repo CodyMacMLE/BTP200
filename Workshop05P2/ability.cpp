@@ -22,4 +22,16 @@ namespace seneca {
 	{
 		return (a_strength > 0) ? true : false;
 	}
+
+	Ability::operator const char* () const
+	{
+		if (*this)
+			return a_abilityName;
+	}
+
+	Ability:: operator int() const
+	{
+		if (*this)
+			return a_strength;
+	}
 }

@@ -24,7 +24,17 @@ namespace seneca {
 		/// <summary>
 		/// Checks if ability object exists: true if exists, false if empty.
 		/// </summary>
-		operator bool() const;
+		explicit operator bool() const;
+
+		/// <summary>
+		/// a query that returns the ability name
+		/// </summary>
+		explicit operator const char* () const;
+
+		/// <summary>
+		/// A query to access the strength of the ability
+		/// </summary>
+		explicit operator int() const;
 	};
 }
 #endif // !SENECA_ABILITY_H
