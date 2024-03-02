@@ -1,0 +1,154 @@
+T1: Testing the load function for `Email`.
+==========:==========:==========:==========:==========
+     Jeremiah Morris  jeremiah_morris85@office.mobi             08:33:21         Regarding the Project
+    Jonathan Russell  jonathan_russell23@website.ae             02:11:48         Can I have an Extension?
+         Colton Lowe  colton_lowe21@wiki.be                     11:21:09         Team Member Unavailable to Work on the Project
+     Eleanor Jenkins  eleanor_jenkins46@site.info               16:01:59         Exciting News!!!
+        Mia Peterson  mia_peterson70@corporation.jobs           10:17:42         Congratulations! You won the ltery
+          Dylan Diaz  dylan_diaz90@agency.cn                    12:18:33         C++ is sooo good
+        Logan Thomas  logan_thomas72@project.ca                 09:32:18         Enjoy your vacation
+     Sophia Martinez  sophia_martinez64@resource.uk             21:27:25         Have you finished the presentation? Send it to me.
+         Alyssa Soto  alyssa_soto29@dev.es                      14:44:55         We should have a meeting tomorrow to discuss the budget
+        Olivia Brown  olivia_brown2@technology.aero             11:37:21         Your package has been delivered
+       Isabel Snyder  isabel_snyder39@webpage.biz               23:01:03         No classes tomorrow
+     Isabel Thompson  isabel_thompson26@directory.au            17:49:03         Is the project cancelled?!?!
+          Emma Jones  emma_jones19@system.sa                    09:25:17         Look at this ASAP
+~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~
+
+T2: Testing copy constructor for `Email`.
+==========:==========:==========:==========:==========
+     Jeremiah Morris  jeremiah_morris85@office.mobi             08:33:21         Regarding the Project
+     Jeremiah Morris  jeremiah_morris85@office.mobi             08:33:21         Regarding the Project
+~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~
+
+T3: Testing copy assignment for `Email`.
+==========:==========:==========:==========:==========
+     Jeremiah Morris  jeremiah_morris85@office.mobi             08:33:21         Regarding the Project
+    Jonathan Russell  jonathan_russell23@website.ae             02:11:48         Can I have an Extension?
+     Jeremiah Morris  jeremiah_morris85@office.mobi             08:33:21         Regarding the Project
+     Jeremiah Morris  jeremiah_morris85@office.mobi             08:33:21         Regarding the Project
+~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~
+
+T4: Testing for self-assignment.
+==========:==========:==========:==========:==========
+     Jeremiah Morris  jeremiah_morris85@office.mobi             08:33:21         Regarding the Project
+     Jeremiah Morris  jeremiah_morris85@office.mobi             08:33:21         Regarding the Project
+     Jeremiah Morris  jeremiah_morris85@office.mobi             08:33:21         Regarding the Project
+     Jeremiah Morris  jeremiah_morris85@office.mobi             08:33:21         Regarding the Project
+~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~
+
+T5: Testing how empty objects are handled.
+==========:==========:==========:==========:==========
+     Jeremiah Morris  jeremiah_morris85@office.mobi             08:33:21         Regarding the Project
+Should be empty A []
+Should be empty B []
+Should be empty C []
+         Colton Lowe  colton_lowe21@wiki.be                     11:21:09         Team Member Unavailable to Work on the Project
+         Colton Lowe  colton_lowe21@wiki.be                     11:21:09         Team Member Unavailable to Work on the Project
+~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~
+
+T6: Testing the load function for `Inbox`.
+==========:==========:==========:==========:==========
+     Jeremiah Morris  jeremiah_morris85@office.mobi             08:33:21         Regarding the Project
+    Jonathan Russell  jonathan_russell23@website.ae             02:11:48         Can I have an Extension?
+         Colton Lowe  colton_lowe21@wiki.be                     11:21:09         Team Member Unavailable to Work on the Project
+     Eleanor Jenkins  eleanor_jenkins46@site.info               16:01:59         Exciting News!!!
+        Mia Peterson  mia_peterson70@corporation.jobs           10:17:42         Congratulations! You won the ltery
+          Dylan Diaz  dylan_diaz90@agency.cn                    12:18:33         C++ is sooo good
+        Logan Thomas  logan_thomas72@project.ca                 09:32:18         Enjoy your vacation
+     Sophia Martinez  sophia_martinez64@resource.uk             21:27:25         Have you finished the presentation? Send it to me.
+         Alyssa Soto  alyssa_soto29@dev.es                      14:44:55         We should have a meeting tomorrow to discuss the budget
+        Olivia Brown  olivia_brown2@technology.aero             11:37:21         Your package has been delivered
+       Isabel Snyder  isabel_snyder39@webpage.biz               23:01:03         No classes tomorrow
+     Isabel Thompson  isabel_thompson26@directory.au            17:49:03         Is the project cancelled?!?!
+          Emma Jones  emma_jones19@system.sa                    09:25:17         Look at this ASAP
+~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~
+
+T7: Load more emails.
+==========:==========:==========:==========:==========
+     Jeremiah Morris  jeremiah_morris85@office.mobi             08:33:21         Regarding the Project
+    Jonathan Russell  jonathan_russell23@website.ae             02:11:48         Can I have an Extension?
+         Colton Lowe  colton_lowe21@wiki.be                     11:21:09         Team Member Unavailable to Work on the Project
+     Eleanor Jenkins  eleanor_jenkins46@site.info               16:01:59         Exciting News!!!
+        Mia Peterson  mia_peterson70@corporation.jobs           10:17:42         Congratulations! You won the ltery
+          Dylan Diaz  dylan_diaz90@agency.cn                    12:18:33         C++ is sooo good
+        Logan Thomas  logan_thomas72@project.ca                 09:32:18         Enjoy your vacation
+     Sophia Martinez  sophia_martinez64@resource.uk             21:27:25         Have you finished the presentation? Send it to me.
+         Alyssa Soto  alyssa_soto29@dev.es                      14:44:55         We should have a meeting tomorrow to discuss the budget
+        Olivia Brown  olivia_brown2@technology.aero             11:37:21         Your package has been delivered
+       Isabel Snyder  isabel_snyder39@webpage.biz               23:01:03         No classes tomorrow
+     Isabel Thompson  isabel_thompson26@directory.au            17:49:03         Is the project cancelled?!?!
+          Emma Jones  emma_jones19@system.sa                    09:25:17         Look at this ASAP
+     Jeremiah Morris  jeremiah_morris85@office.mobi             10:09:00         Our project has been approved
+    Jonathan Russell  jonathan_russell23@website.ae             08:02:48         I cannot come to classes today
+         Colton Lowe  colton_lowe21@wiki.be                     11:13:54         Has the projects received approval from ministry?
+     Eleanor Jenkins  eleanor_jenkins46@site.info               12:41:05         Free things from us. Claim your prize now!!!
+~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~
+
+T8: Copy constructor for `Inbox`.
+==========:==========:==========:==========:==========
+     Jeremiah Morris  jeremiah_morris85@office.mobi             10:09:00         Our project has been approved
+    Jonathan Russell  jonathan_russell23@website.ae             08:02:48         I cannot come to classes today
+         Colton Lowe  colton_lowe21@wiki.be                     11:13:54         Has the projects received approval from ministry?
+     Eleanor Jenkins  eleanor_jenkins46@site.info               12:41:05         Free things from us. Claim your prize now!!!
+
+     Jeremiah Morris  jeremiah_morris85@office.mobi             10:09:00         Our project has been approved
+    Jonathan Russell  jonathan_russell23@website.ae             08:02:48         I cannot come to classes today
+         Colton Lowe  colton_lowe21@wiki.be                     11:13:54         Has the projects received approval from ministry?
+     Eleanor Jenkins  eleanor_jenkins46@site.info               12:41:05         Free things from us. Claim your prize now!!!
+~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~
+
+T9: Copy assignment for `Inbox`.
+==========:==========:==========:==========:==========
+     Jeremiah Morris  jeremiah_morris85@office.mobi             10:09:00         Our project has been approved
+    Jonathan Russell  jonathan_russell23@website.ae             08:02:48         I cannot come to classes today
+         Colton Lowe  colton_lowe21@wiki.be                     11:13:54         Has the projects received approval from ministry?
+     Eleanor Jenkins  eleanor_jenkins46@site.info               12:41:05         Free things from us. Claim your prize now!!!
+
+     Jeremiah Morris  jeremiah_morris85@office.mobi             10:09:00         Our project has been approved
+    Jonathan Russell  jonathan_russell23@website.ae             08:02:48         I cannot come to classes today
+         Colton Lowe  colton_lowe21@wiki.be                     11:13:54         Has the projects received approval from ministry?
+     Eleanor Jenkins  eleanor_jenkins46@site.info               12:41:05         Free things from us. Claim your prize now!!!
+~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~
+
+T10: Testing operator+= for `Inbox`.
+==========:==========:==========:==========:==========
+     Jeremiah Morris  jeremiah_morris85@office.mobi             08:33:21         Regarding the Project
+    Jonathan Russell  jonathan_russell23@website.ae             02:11:48         Can I have an Extension?
+~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~
+
+T11: Testing operator+ for `Inbox`.
+==========:==========:==========:==========:==========
+     Jeremiah Morris  jeremiah_morris85@office.mobi             08:33:21         Regarding the Project
+    Jonathan Russell  jonathan_russell23@website.ae             02:11:48         Can I have an Extension?
+
+     Jeremiah Morris  jeremiah_morris85@office.mobi             08:33:21         Regarding the Project
+    Jonathan Russell  jonathan_russell23@website.ae             02:11:48         Can I have an Extension?
+         Colton Lowe  colton_lowe21@wiki.be                     11:21:09         Team Member Unavailable to Work on the Project
+~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~
+
+T12: Testing for self-assignment for `Inbox`.
+==========:==========:==========:==========:==========
+     Jeremiah Morris  jeremiah_morris85@office.mobi             08:33:21         Regarding the Project
+    Jonathan Russell  jonathan_russell23@website.ae             02:11:48         Can I have an Extension?
+
+     Jeremiah Morris  jeremiah_morris85@office.mobi             08:33:21         Regarding the Project
+    Jonathan Russell  jonathan_russell23@website.ae             02:11:48         Can I have an Extension?
+~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~
+
+T13: Testing the save function for `Inbox`.
+==========:==========:==========:==========:==========
+     Jeremiah Morris  jeremiah_morris85@office.mobi             10:09:00         Our project has been approved
+    Jonathan Russell  jonathan_russell23@website.ae             08:02:48         I cannot come to classes today
+         Colton Lowe  colton_lowe21@wiki.be                     11:13:54         Has the projects received approval from ministry?
+     Eleanor Jenkins  eleanor_jenkins46@site.info               12:41:05         Free things from us. Claim your prize now!!!
+~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~
+
+T14: Testing that operator<< uses the param for output.
+==========:==========:==========:==========:==========
+     Jeremiah Morris  jeremiah_morris85@office.mobi             10:09:00         Our project has been approved
+    Jonathan Russell  jonathan_russell23@website.ae             08:02:48         I cannot come to classes today
+         Colton Lowe  colton_lowe21@wiki.be                     11:13:54         Has the projects received approval from ministry?
+     Eleanor Jenkins  eleanor_jenkins46@site.info               12:41:05         Free things from us. Claim your prize now!!!
+~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~:~~~~~~~~~~
+
