@@ -9,4 +9,14 @@
 using namespace std;
 namespace seneca {
 
+	Inbox::Inbox()
+	{
+		m_emails = nullptr;
+		m_cntEmails = 0;
+	}
+
+	Inbox::Inbox(Inbox& source)
+	{
+
+	}
 }

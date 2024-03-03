@@ -22,7 +22,7 @@ namespace seneca {
 		/// <summary>
 		/// a statically allocated array of 20 characters representing the date and time when the email has been received. The date and time field will have the format YYYY-MM-DD HH:MM:SS
 		/// </summary>
-		char m_dateReceived[10 + 1];
+		char m_dateReceived[20 + 1];
 
 		/// <summary>
 		/// a pointer to a dynamically allocated array of characters that represents the subject of the email.

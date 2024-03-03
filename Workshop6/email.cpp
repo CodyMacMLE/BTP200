@@ -52,12 +52,13 @@ namespace seneca {
 
 	Email::~Email()
 	{
-
+		delete[] m_subject;
 	}
 
 	bool Email::load(std::istream& in)
 	{
-
+		char buffer[1000 + 1];
+		istream::getline(in, buffer); // Unknown issue
 	}
 
 	std::ostream& operator <<(std::ostream& out, const Email email)
