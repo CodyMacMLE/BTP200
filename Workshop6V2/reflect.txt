@@ -1,0 +1,34 @@
+// Cody MacDonald
+// cmacdonald33@myseneca.ca
+// 159702232
+// March 6th, 2024
+
+-------------------------------------------- Question 1 -------------------------------------------
+Explain what happens if the copy-assignment operator does not check for self-assignment 
+(do an experiment, report your findings, and explain the result)
+---------------------------------------------------------------------------------------------------
+
+If the copy-assignment operator does not check for self-assignment we will have problems with 
+destruction of the said object. In our copy-assignment operators we pass-by-reference, which is 
+two different variables having access to the same address. If we create a new object that points 
+to the same copied object. When the program goes out of scope the copied object will delete the
+values at the address. Which is initially fine in terms of errors, but when the original object 
+tries to go out of scope its contents are already deleted since they are referencing each other.
+This second object going out of scope is when we will run into crashes.
+
+-------------------------------------------- Question 2 -------------------------------------------
+The instructions above said that the copy-constructor should call the copy assignment-operator 
+to do the actual copy. Do some research and explain why this method is preferred and why the 
+copy-constructor should not do the copy by itself.
+---------------------------------------------------------------------------------------------------
+
+After researching more, I only find articles stating that the copy constructor should not call the
+assignment-operator. Rather than call the assignment operator, the articles state that each
+function should independently work on their own so that it is more secure. The issue then becomes a 
+code redundancy issue. If both functions run independently, they will have similar coding blocks 
+which cause issues for maintenance later (adding additional variables for instance). They get 
+around this issue by creating a third function ie. init() and call that function inside both. Both 
+work the same, but if the init() option has better security then I believe this would be a better 
+coding practice to follow.
+
+---------------------------------------------------------------------------------------------------

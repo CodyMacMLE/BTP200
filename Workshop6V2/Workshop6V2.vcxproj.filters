@@ -21,17 +21,23 @@
     <ClCompile Include="inbox.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="w6_p1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="sample_output.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="reflect.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
-    <None Include="emails_misc.csv">
+    <None Include="emails_monday.csv">
       <Filter>Source Files</Filter>
     </None>
-    <None Include="emails_monday.csv">
+    <None Include="emails_misc.csv">
       <Filter>Source Files</Filter>
     </None>
   </ItemGroup>

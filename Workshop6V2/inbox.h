@@ -5,13 +5,14 @@
 // Cody MacDonald
 // cmacdonald33@myseneca.ca
 // 159702232
-// February 14th, 2024
+// March 6th, 2024
 
-namespace seneca {
-	/// An onject that stores a collection of emails
-	class Inbox {
+namespace seneca 
+{
+	class Inbox
+	{
 		/// <summary>
-		/// A pointer to a dynamic array of emails of type Email
+		/// the address of a dynamically allocated array of objects of type Email
 		/// </summary>
 		Email* m_emails;
 
@@ -29,15 +30,15 @@ namespace seneca {
 		/// <summary>
 		/// Copy constructor
 		/// </summary>
-		/// <param name="source">Object to be copied</param>
-		Inbox(Inbox& source);
+		/// <param name="that">Object to be copied</param>
+		Inbox(const Inbox& that);
 
 		/// <summary>
 		/// Copies one inbox object to another
 		/// </summary>
-		/// <param name="source"></param>
+		/// <param name="that"></param>
 		/// <returns></returns>
-		Inbox& operator= (Inbox& source);
+		Inbox& operator= (const Inbox& that);
 
 		/// <summary>
 		/// Destructor
@@ -56,7 +57,7 @@ namespace seneca {
 		/// </summary>
 		/// <param name="email"></param>
 		/// <returns></returns>
-		Inbox& operator+ (const Email& email) const;
+		Inbox operator+ (const Email& email) const;
 
 		/// <summary>
 		/// a modifier that loads a collection of emails from a file and adds them to the current object.
@@ -79,6 +80,5 @@ namespace seneca {
 		friend std::ostream& operator<< (std::ostream& out, const Inbox inbox);
 	};
 }
-
 #endif // !SENECA_INBOX_H
 

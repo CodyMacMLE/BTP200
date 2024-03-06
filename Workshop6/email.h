@@ -66,6 +66,13 @@ namespace seneca {
 		bool load(std::istream& in);
 
 		/// <summary>
+		/// Itterates through emails date recieved to access the time
+		/// </summary>
+		/// <param name="email">The email to be checked</param>
+		/// <returns>time</returns>
+		char* getTime() const;
+
+		/// <summary>
 		/// 
 		/// </summary>
 		/// <param name="out"></param>

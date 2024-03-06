@@ -8,7 +8,7 @@
 // Cody MacDonald
 // cmacdonald33@myseneca.ca
 // 159702232
-// February 14th, 2024
+// March 6th, 2024
 
 int cout = 0; // prevents compilation if headers don't follow convention
 
@@ -78,11 +78,11 @@ int main()
 		std::cout << "T5: Testing how empty objects are handled.\n";
 		std::cout << "==========:==========:==========:==========:==========\n";
 		std::cout << emails[1]
-			<< "Should be empty A [" << emails[3] << "]\n";
+		          << "Should be empty A [" << emails[3] << "]\n";
 		// copy empty object into a non-empty one
 		emails[1] = emails[3];
 		std::cout << "Should be empty B [" << emails[1] << "]\n"
-			<< "Should be empty C [" << emails[3] << "]\n";
+		          << "Should be empty C [" << emails[3] << "]\n";
 		// copy non-empty object into an empty one
 		emails[3] = emails[2];
 		std::cout << emails[3] << emails[2];

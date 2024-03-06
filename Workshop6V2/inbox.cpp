@@ -5,37 +5,35 @@
 // Cody MacDonald
 // cmacdonald33@myseneca.ca
 // 159702232
-// February 14th, 2024
+// March 6th, 2024
 
 using namespace std;
-namespace seneca {
-
+namespace seneca
+{
 	Inbox::Inbox()
 	{
-		m_emails = nullptr;
-		m_cntEmails = 0;
+		this->m_emails = nullptr;
+		this->m_cntEmails = 0;
 	}
 
-	Inbox::Inbox(Inbox& source)
+	Inbox::Inbox(const Inbox& that)
 	{
-		m_emails = nullptr;
-		*this = source;
+		this->m_emails = nullptr;
+		*this = that;
 	}
 
-	Inbox& Inbox::operator= (Inbox& source)
+	Inbox& Inbox::operator= (const Inbox& that)
 	{
-		if (this != &source)
+		if (this != &that)
 		{
 			delete[] this->m_emails;
-			this->m_cntEmails = source.m_cntEmails;
+			this->m_cntEmails = that.m_cntEmails;
 
-			if (source.m_emails != nullptr)
+			if (that.m_emails != nullptr)
 			{
 				this->m_emails = new Email[this->m_cntEmails];
 				for (auto i = 0; i < this->m_cntEmails; ++i)
-				{
-					this->m_emails[i] = source.m_emails[i];
-				}
+					this->m_emails[i] = that.m_emails[i];
 			}
 			else
 			{
@@ -50,20 +48,21 @@ namespace seneca {
 		delete[] this->m_emails;
 	}
 
-	Inbox& Inbox::operator+= (const Email& source)
-	{
-		Inbox* tmp = new Inbox[m_cntEmails + 1];
-		for (auto i = 0; i < m_cntEmails; ++i)
-			tmp->m_emails[i] = m_emails[i];
-		tmp->m_emails[m_cntEmails] = source;
-		++m_cntEmails;
 
-		delete[] m_emails;
-		m_emails = tmp->m_emails;
+	Inbox& Inbox::operator+= (const Email& email)
+	{
+		Email* tmp = new Email[m_cntEmails + 1];
+		for (auto i = 0; i < m_cntEmails; ++i)
+			tmp[i] = this->m_emails[i];
+		tmp[m_cntEmails] = email;
+		++(this->m_cntEmails);
+
+		delete[] this->m_emails;
+		this->m_emails = tmp;
 		return *this;
 	}
 
-	Inbox& Inbox::operator+ (const Email& email) const
+	Inbox Inbox::operator+ (const Email& email) const
 	{
 		Inbox tmp = *this;
 		tmp += email;
@@ -72,22 +71,18 @@ namespace seneca {
 
 	void Inbox::load(const char* filename)
 	{
-		if (filename != null)
+		if (filename != nullptr)
 		{
-			ifstream file;
-			file.open(filename);
+			ifstream file(filename);
 			if (file.is_open())
 			{
-				bool EOF = true;
-				while (EOF)
+				while (file)
 				{
 					Email tmp;
-					char buffer[1220 + 1];
-					file.ifstream::getline(buffer, 1220);
-					EOF = tmp.load(buffer);
-					this += tmp;
+					tmp.load(file);
+					*this += tmp;
 				}
-				file.close()
+				file.close();
 			}
 		}
 	}
@@ -96,12 +91,11 @@ namespace seneca {
 	{
 		if (filename != nullptr)
 		{
-			ofstream file;
-			file.open(filename);
+			ofstream file(filename);
 			if (file.is_open())
 			{
 				for (auto i = 0; i < this->m_cntEmails; ++i)
-					fout << m_emails;
+					file << m_emails[i];
 			}
 			file.close();
 		}
