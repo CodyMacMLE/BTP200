@@ -1,0 +1,28 @@
+// Cody MacDonald
+// cmacdonald33@myseneca.ca
+// 159702232
+// March 13th, 2024
+
+---------------------------------------------- Question 1 ----------------------------------------------------------
+You were instructed to overload the insertion operator twice (for both classes BankAccount and SavingsAccount). 
+Since the implementation was identical, why couldn't we just inherit it in the derived class? What would happen 
+if we don't overload it for SavingsAccount? Would the program still work? Do an experiment and report your findings.
+--------------------------------------------------------------------------------------------------------------------
+As discussed in class and stated in the readings. During inheritance of objects, the derived object copies most
+functions except special member functions. This includes overloaded operation mem functions, constructors and
+destructors. With this in mind, the programmer needs to overload the insertion operator for both objects 
+specifically. We can get around code redundancy by creating the read() and write() functions like in this workshop.
+That way we can call the function of the base class in the derived class's read() function.
+
+---------------------------------------------- Question 2 ----------------------------------------------------------
+In the derived class you needed to access the balance of the account in order to apply interest, but the balance 
+attribute was private in the base class (hence, inaccessible in the derived class). How were you able to get access 
+to the balance? If you would make the attribute to be not private, the code would simplify a lot; do some research 
+and explain why is bad practice to have non-private attributes.
+--------------------------------------------------------------------------------------------------------------------
+The function getBalance() was a protected member function. This means it is like a private member function meaning
+to only the object can access it, but protected has the inclusion of allowing derived classes to use it as well.
+This is a way we can keep the member private and the client can not access and change it. While derived objects
+still have access to the members/ member functions of that instance.
+
+--------------------------------------------------------------------------------------------------------------------
