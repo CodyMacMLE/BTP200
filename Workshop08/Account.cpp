@@ -17,11 +17,27 @@ namespace seneca
 	bool Account::credit(double amount)
 	{
 		bool exitFlag = false;
-		if (amount > 0) // might need to include 0, unknown at the moment
+		if (amount > 0)
 		{
 			m_balance += amount;
 			exitFlag = true;
 		}
 		return exitFlag;
+	}
+
+	bool Account::debit(double amount)
+	{
+		bool exitFlag = false;
+		if (amount > 0)
+		{
+			m_balance -= amount;
+			exitFlag = true;
+		}
+		return exitFlag;
+	}
+
+	double Account::balance() const
+	{
+		return this->m_balance;
 	}
 }

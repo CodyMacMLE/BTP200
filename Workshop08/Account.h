@@ -10,6 +10,13 @@ namespace seneca
         /// Current balance
         /// </summary>
         double m_balance;
+    protected:
+        /// <summary>
+        /// returns the current balance of the account
+        /// </summary>
+        /// <returns></returns>
+        double balance() const;
+
     public:
         /// <summary>
         /// Initializes the account with a balance
@@ -21,8 +28,15 @@ namespace seneca
         /// receives an amount to be credited (added) to the account balance
         /// </summary>
         /// <param name="amount">amount to be added</param>
-        /// <returns>Whether addition was successful</returns>
+        /// <returns>Whether credit was successful</returns>
         bool credit(double amount);
+
+        /// <summary>
+        /// receives an amount to be debited (subtracted) to the account balance
+        /// </summary>
+        /// <param name="amount">amount to be added</param>
+        /// <returns>Whether debit was successful</returns>
+        bool debit(double amount);
     };
 }
 #endif // !SENECA_ACCOUNT_H
