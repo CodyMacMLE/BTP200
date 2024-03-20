@@ -2,6 +2,8 @@
 
 namespace seneca
 {
+	Account::~Account() {};
+
 	Account::Account(double balance)
 	{
 		if (balance > 0.0)

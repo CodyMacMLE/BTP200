@@ -18,6 +18,8 @@ namespace seneca
         double balance() const;
 
     public:
+        ~Account();
+
         /// <summary>
         /// Initializes the account with a balance
         /// </summary>

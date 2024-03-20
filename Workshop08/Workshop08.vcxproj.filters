@@ -21,9 +21,6 @@
     <ClCompile Include="w8_p1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="iAccount.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Account.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

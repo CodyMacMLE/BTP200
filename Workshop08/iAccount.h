@@ -34,8 +34,8 @@ namespace seneca
 		/// <summary>
 		/// Deallocates memory
 		/// </summary>
-		virtual ~iAccount() = 0;
-	};
+		virtual ~iAccount() = 0 {};
+	}; 
 	/// <summary>
 	/// receives a C-style string identifying the type of account and the initial account balance, creates the account with the starting balance and returns its address.
 	/// </summary>

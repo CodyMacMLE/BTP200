@@ -7,11 +7,11 @@ namespace seneca
     ChequingAccount::ChequingAccount(double balance, double transactionFee, double monthlyFee) :
         Account(balance)
     {
-        if (m_transactionFee > 0)
+        if (transactionFee >= 0.0)
             m_transactionFee = transactionFee;
         else
             m_transactionFee = 0.0;
-        if (monthlyFee > 0)
+        if (monthlyFee >= 0.0)
             m_monthlyFee = monthlyFee;
         else
             m_monthlyFee = 0.0;
@@ -46,7 +46,7 @@ namespace seneca
 
     void ChequingAccount::display(std::ostream& out) const
     {
-        out << "Account Type: Chequing\n Balance: $";
+        out << "Account Type: Chequing\nBalance: $";
         out << std::setprecision(2) << std::fixed << this->balance() << std::endl;
         out << "Per Transaction Fee: " << this->m_transactionFee << std::endl;
         out << "Monthly Fee: " << this->m_monthlyFee << std::endl;

@@ -19,7 +19,7 @@ namespace seneca
 	{
 		out << "Account Type: Savings\nBalance: $";
 		out << std::setprecision(2) << std::fixed << this->balance() << std::endl;
-		out << "Interest Rate (%): " << this->m_interestRate << std::endl;
+		out << "Interest Rate (%): " << this->m_interestRate * 100 << std::endl;
 		out << std::setprecision(2);
 	}
 }
