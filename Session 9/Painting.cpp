@@ -31,7 +31,7 @@ Painting::~Painting()
 //      then that constructor will call copy const from base class
 // If programmer inserts a copy contructor:
 //      programmer must choose which const from base class to call, otherwise default const from base is called
-Painting::Painting(const Painting& that) :
+Painting::Painting(const Painting& that)
 	// Image((Image&)that) 
 	// calling copy constructor to copy dynamic memory from image { can be cast because Image(Painting) doesn't exist, but compiler converts anyways} 
 	// to optimize we do not need this call as it is dealt with in operation=

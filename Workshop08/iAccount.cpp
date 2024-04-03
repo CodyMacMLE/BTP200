@@ -3,5 +3,5 @@
 
 namespace seneca
 {
-
+	iAccount::~iAccount() {}
 }
