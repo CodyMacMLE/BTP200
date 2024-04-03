@@ -130,7 +130,6 @@
     <ClCompile Include="Account.cpp" />
     <ClCompile Include="Allocator.cpp" />
     <ClCompile Include="ChequingAccount.cpp" />
-    <ClCompile Include="iAccount.cpp" />
     <ClCompile Include="SavingsAccount.cpp" />
     <ClCompile Include="w8_p1.cpp" />
   </ItemGroup>
