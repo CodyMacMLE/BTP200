@@ -1,0 +1,26 @@
+// Cody MacDonald
+// 159702232
+// cmacdonald33@myseneca.ca
+// April 03, 2024
+
++-----------------------------------------------------------------------------------+
+| Describe the topics that you have learned in completing this particular workshop  |
+| and the project milestones and mention any issues that caused you difficulty      |
+| and how you solved them.                                                          |
++-----------------------------------------------------------------------------------+
+
+ In the following workshop we developed our own templates for functions and structs.
+ The difficulty in the workshop was whether to have the argument / parameters as
+ a pointer or reference and when we needed to dereference if needed. The debugger
+ made this a little easier.
+
+ The worskshop had us make a template to build a struct object that can be filled
+ with members of any type. The struct would store a pair that our other function 
+ had found. The match function would look through the two arrays and see if any 
+ of the values would match. if they did it would store it in a Pair object to be 
+ printed later. This allows us to interate through a student database and match
+ any students who are in the BSD program or with the same function we can check
+ which students students number match an array.
+
+ It is super confusing to try and understand through reading the code, but 
+ templates seem like a super powerful tool.
