@@ -40,5 +40,8 @@
     <Text Include="sample_output.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="reflect.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
